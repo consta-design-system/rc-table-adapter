@@ -73,7 +73,8 @@
     "react-dom": "16.8.6"
   },
   "dependencies": {
-    "@bem-react/classname": "1.5.8"
+    "@bem-react/classname": "1.5.8",
+    "rc-table": "^7.18.1"
   },
   "resolutions": {
     "@types/react": "16.9.34",
