@@ -1,1 +1,1 @@
-# rc-table
+# table
