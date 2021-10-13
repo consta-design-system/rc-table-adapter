@@ -1,6 +1,6 @@
-# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | RCTable
+# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | Table
 
-Это компонент RCTable для дизайн-системы Consta: таблица с фильтрами, группировкой, кастомными полями и другими настройками. Компонент взят из библиотеки [rc-table](https://github.com/react-component/table) и адаптирован для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Это компонент Table для дизайн-системы Consta: таблица с фильтрами, группировкой, кастомными полями и другими настройками. Компонент взят из библиотеки [rc-table](https://github.com/react-component/table) и адаптирован для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
 # Как использовать
 
