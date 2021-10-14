@@ -1,0 +1,103 @@
+import { TableExample } from './examples/TableExample/TableExample'
+
+import { RemadeInfo, RemadeTableInfo } from '@/__private__/storybook/components/RemadeInfo/RemadeInfo'
+
+
+# Table
+
+```tsx
+import { Table } from '@consta/rc-table/Table'
+```
+
+Компонент для создания сложных таблиц. Его стоит использовать,
+если не хватает возможностей стандартного компонента
+[Table](https://consta-uikit.vercel.app/?path=/docs/components-table--custom-rows)
+из дизайн-системы Consta.
+
+<RemadeInfo commponentName="Table" apiUrl="https://github.com/react-component/table" libraryName="rc-table" />
+
+- [Строки и колонки](#строки-и-колонки)
+- [Импорт](#импорт)
+- [Список свойств](#свойства)
+
+## Строки и колонки
+
+Создайте объект с описанием строк.
+В поле `key` укажите идентификатор строки (обычно это номер по порядку).
+
+Создайте объект с данными для колонок:
+- `title` — заголовок колонки,
+- `dataIndex` — имя поля, из которого берутся данные для этой колонки,
+- `key` — идентификатор колонки.
+
+Теперь можно вывести таблицу. В свойстве `dataSource` передайте объект данными,
+в свойстве `column` — объект с описанием колонок.
+
+```tsx
+
+const data = [
+  { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
+  { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
+]
+
+const columns = [
+  {
+    title: 'Кто',
+    dataIndex: 'name',
+    key: 'name',
+    width: 150,
+  },
+  {
+    title: 'Что делает',
+    dataIndex: 'occupation',
+    key: 'occupation',
+    width: 150,
+  },
+  {
+    title: 'Где',
+    dataIndex: 'address',
+    key: 'address',
+    width: 150,
+  },
+  {
+    title: 'Как помочь',
+    dataIndex: '',
+    key: 'operations',
+    render: () => <p>Покормить печеньем</p>,
+  },
+]
+
+<Table dataSource={data} columns={columns} />
+```
+
+<TableExample />
+
+## Импорт
+
+```tsx
+import { Table } from '@consta/rc-table/Table'
+```
+
+## Свойства
+
+<RemadeTableInfo apiUrl="https://github.com/react-component/table" />
+
+| Свойство | Тип и значения | По умолчанию | Описание |
+| -------- | -------------- | ------------ | -------- |
+| [`dataSource`](#строки-и-колонки)  | `Data[]`       | -            | Объект с данными для строк         |
+| [`column`](#строки-и-колонки)  | `Data[]`       | -            | Объект с информацией о колонках         |
+
+### Атрибуты строк
+
+| Свойство | Тип и значения | По умолчанию | Описание |
+| -------- | -------------- | ------------ | -------- |
+| [`key`](#строки-и-колонки)  | `string`       | -            | Уникальный идентификатор строки  |
+
+### Атрибуты колонок
+
+| Свойство | Тип и значения | По умолчанию | Описание |
+| -------- | -------------- | ------------ | -------- |
+| [`key?`](#строки-и-колонки)  | `string`       | -            |  Уникальный идентификатор колонки  |
+| [`title?`](#строки-и-колонки)  | `string`       | -            |  Название колонки       |
+| [`dataIndex?`](#строки-и-колонки)  | `string`       | -            |  Имя поля, из которого берутся данные для этой колонки |
+| `width?`  | `string` &#124; `number`       | -            |  Ширина колонки |
