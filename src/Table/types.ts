@@ -15,6 +15,7 @@ type ExcludeProps =
   | 'onHeaderRow'
   | 'transformColumns'
   | 'expandIcon'
+  | 'prefixCls'
 
 export type TableProps<ITEM> = Omit<RCTableProps, ExcludeProps> & {
   data?: ITEM[]
@@ -23,6 +24,7 @@ export type TableProps<ITEM> = Omit<RCTableProps, ExcludeProps> & {
   onHeaderRow?: GetComponentProps<readonly ColumnType<Record<string, any>>[]>
   transformColumns?: (columns: ColumnsType<Record<string, any>>) => ColumnsType<Record<string, any>>
   expandIcon?: RenderExpandIcon<Record<string, any>>
+  prefixCls?: string
 }
 
 export type TableComponentType = <ITEM>(props: TableProps<ITEM>) => React.ReactElement | null
