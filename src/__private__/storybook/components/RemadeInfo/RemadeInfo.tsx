@@ -9,8 +9,12 @@ import './RemadeInfo.css'
 
 const cnRemadeInfo = cn('RemadeInfo')
 
-export const RemadeInfo: React.FC<{ apiUrl: string; commponentName: string }> = props => {
-  const { commponentName, apiUrl } = props
+export const RemadeInfo: React.FC<{
+  apiUrl: string
+  commponentName: string
+  libraryName: string
+}> = props => {
+  const { commponentName, apiUrl, libraryName } = props
   return (
     <Informer className={cnRemadeInfo()} status="system" view="bordered">
       <Text>
@@ -19,16 +23,10 @@ export const RemadeInfo: React.FC<{ apiUrl: string; commponentName: string }> = 
           {commponentName}
         </Text>{' '}
         из библиотеки{' '}
-        <Text
-          className={cnRemadeInfo('Link')}
-          as="a"
-          view="link"
-          href="https://g2plot.antv.vision/en"
-          target="_blank"
-        >
-          G2Plot
-        </Text>
-        , к нему добавили тематизацию из{' '}
+        <Text className={cnRemadeInfo('Link')} as="a" view="link" href={apiUrl} target="_blank">
+          {libraryName}
+        </Text>{' '}
+        с тематизацией из{' '}
         <Text
           className={cnRemadeInfo('Link')}
           as="a"
@@ -37,15 +35,7 @@ export const RemadeInfo: React.FC<{ apiUrl: string; commponentName: string }> = 
           target="_blank"
         >
           дизайн-системы Consta
-        </Text>{' '}
-        и полностью проксировали API.
-      </Text>
-      <Text style={{ marginTop: 'var(--space-m)' }}>
-        Здесь описаны только основные свойства, подробности — в{' '}
-        <Text className={cnRemadeInfo('Link')} as="a" view="link" href={apiUrl} target="_blank">
-          документации G2Plot
         </Text>
-        .
       </Text>
     </Informer>
   )

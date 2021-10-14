@@ -1,10 +1,6 @@
 import React from 'react'
 
-import { createMetadata } from '@/__private__/storybook'
-
-import { Table } from '../Table'
-
-import mdx from './Table.docs.mdx'
+import { Table } from '../../../Table'
 
 const columns = [
   {
@@ -26,7 +22,7 @@ const columns = [
     width: 150,
   },
   {
-    title: 'Поддержать',
+    title: 'Как помочь',
     dataIndex: '',
     key: 'operations',
     render: () => <p>Покормить печеньем</p>,
@@ -38,16 +34,6 @@ const data = [
   { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
 ]
 
-export function Playground() {
+export function TableExample() {
   return <Table columns={columns} data={data} />
 }
-
-export default createMetadata({
-  title: 'Компоненты|/Table',
-  id: 'components/Table',
-  parameters: {
-    docs: {
-      page: mdx,
-    },
-  },
-})
