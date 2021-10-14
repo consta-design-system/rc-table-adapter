@@ -8,10 +8,10 @@
 
 ```sh
 # NPM
-$ npm install @consta/rc-table
+$ npm install @consta/table
 
 # Yarn
-$ yarn add @consta/rc-table
+$ yarn add @consta/table
 ```
 
 ## Подключите зависимости
@@ -24,7 +24,7 @@ $ yarn add @consta/rc-table
 
 ```js
 import { Theme, presetGpnDefault } from '@consta/uikit/Theme'
-import { Table } from '@consta/rc-table/Table'
+import { Table } from '@consta/table'
 
 const data = [
   { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
