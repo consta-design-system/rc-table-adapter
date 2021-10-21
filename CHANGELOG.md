@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.1.3 (21/10/2021)
+- [feat(Table): add default styles (#5)](https://github.com/gazprom-neft/table/commit/fd20f3391625a2cd27899d9d35df53a003732988) - [@N1MBER](https://github.com/N1MBER)
+
+--------------------
+
 ## v0.1.2 (14/10/2021)
 - [chore(global): edit library import](https://github.com/gazprom-neft/table/commit/aaa032c8fbf8c19a9312b85e2bd1bf9e4483ff8b) - [@gizeasy](https://github.com/gizeasy)
 
