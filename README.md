@@ -30,6 +30,7 @@ const data = [
   { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
   { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
 ]
+
 const columns = [
   {
     title: 'Кто',
