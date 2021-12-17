@@ -2,11 +2,15 @@ import React from 'react'
 
 import { default as RCTable } from 'rc-table'
 
-import { TableComponentType } from './types'
-import './Table.css'
+import { UseRcTableThemeProps } from '../useRcTableTheme/helper'
+import { useRcTableTheme } from '../useRcTableTheme/useRcTableTheme'
+
+export type TableComponentType = <ITEM = unknown>(
+  props: UseRcTableThemeProps<ITEM>
+) => React.ReactElement | null
 
 export const Table: TableComponentType = props => {
-  const { prefixCls = 'rc-table' } = props
+  const tableProps = useRcTableTheme(props)
 
-  return <RCTable {...props} prefixCls={prefixCls} />
+  return <RCTable {...tableProps} />
 }

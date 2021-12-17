@@ -11,6 +11,7 @@ module.exports = {
   ],
   plugins: ['todo-plz'],
   rules: {
+    '@typescript-eslint/member-ordering': 'off',
     'todo-plz/ticket-ref': [
       'error',
       {
@@ -18,5 +19,17 @@ module.exports = {
         terms: ['TODO', 'todo'],
       },
     ],
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
+     '@typescript-eslint/ban-types': ['off'],
+     '@typescript-eslint/tslint/config': [
+       'error',
+       {
+         rules: {
+           'no-array-mutation': false,
+         },
+       },
+     ],
+     'react-hooks/exhaustive-deps': 'off',
+     'default-case': 'off',
   },
 }
