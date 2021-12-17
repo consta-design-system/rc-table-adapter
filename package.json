@@ -1,6 +1,6 @@
 {
   "name": "@consta/table",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "scripts": {
     "build:css": "NODE_ENV=production postcss 'src/**/*.css' --base src --dir lib",
     "build:js": "NODE_ENV=production BUILDING_JS=true babel src --out-dir lib --extensions '.ts,.tsx' --source-maps",
@@ -72,9 +72,7 @@
     ]
   },
   "peerDependencies": {
-    "@consta/uikit": "^1.12.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "@consta/uikit": ">= 3.0.0"
   },
   "dependencies": {
     "@bem-react/classname": "^1.5.8",
@@ -97,6 +95,7 @@
     "@babel/cli": "7.10.5",
     "@babel/plugin-transform-react-jsx": "7.3.0",
     "@babel/preset-typescript": "7.10.4",
+    "@consta/uikit": ">= 3.0.0",
     "@consta/widgets-configs": "1.5.0",
     "@consta/widgets-utils": "0.2.14",
     "@mdx-js/loader": "1.5.9",
