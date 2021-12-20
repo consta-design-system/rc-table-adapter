@@ -7,12 +7,12 @@ import { cn } from '@/__private__/utils/bem'
 
 import '../Table/Table.css'
 
-import { DefaultItem, RcTableProps, UseRcTableThemeProps } from './helper'
+import { DefaultItem, RcTableProps, UseRcTableAdapterProps } from './helper'
 
 const cnTable = cn('rc-table')
 
-export function useRcTableTheme<ITEM extends {} = DefaultItem>(
-  props: UseRcTableThemeProps<ITEM>
+export function useRcTableAdapter<ITEM extends {} = DefaultItem>(
+  props: UseRcTableAdapterProps<ITEM>
 ): RcTableProps<ITEM> {
   const {
     prefixCls,

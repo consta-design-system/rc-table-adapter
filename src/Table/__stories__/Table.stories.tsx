@@ -5,7 +5,7 @@ import { Table } from '../Table'
 
 import mdx from './Table.docs.mdx'
 import { boolean, select } from '@storybook/addon-knobs'
-import { defaultPropSize, propSize } from '../../useRcTableTheme/helper'
+import { defaultPropSize, propSize } from '../../useRcTableAdapter/helper'
 import {
   columns,
   data as mockData,
@@ -45,20 +45,20 @@ export function Playground() {
 
   const [data, setData] = useState<TableData[]>([])
 
-  const getData = () => {
-    if (emptyData) {
-      return []
-    }
-    if (grouped) {
-      return groupData
-    }
-    if (expandable) {
-      return expandData
-    }
-    return mockData
-  }
-
   useEffect(() => {
+    const getData = () => {
+      if (emptyData) {
+        return []
+      }
+      if (grouped) {
+        return groupData
+      }
+      if (expandable) {
+        return expandData
+      }
+      return mockData
+    }
+
     setData(getData())
   }, [expandable, grouped, emptyData])
 

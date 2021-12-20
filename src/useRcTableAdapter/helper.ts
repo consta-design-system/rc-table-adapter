@@ -40,7 +40,7 @@ export type RcTableProps<ITEM extends {} = DefaultItem> = Omit<TableProps, Exclu
   prefixCls?: string
 }
 
-export type UseRcTableThemeProps<ITEM = unknown> = RcTableProps<ITEM> & {
+export type UseRcTableAdapterProps<ITEM = unknown> = RcTableProps<ITEM> & {
   size?: PropSize
   zebraStriped?: 'odd' | 'even'
   borderBetweenColumns?: boolean
