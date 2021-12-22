@@ -5,7 +5,7 @@ import { RenderExpandIconProps } from 'rc-table/lib/interface'
 
 import { cn } from '@/__private__/utils/bem'
 
-import '../Table/Table.css'
+import './UseRcTableAdapter.css'
 
 import { DefaultItem, RcTableProps, UseRcTableAdapterProps } from './helper'
 

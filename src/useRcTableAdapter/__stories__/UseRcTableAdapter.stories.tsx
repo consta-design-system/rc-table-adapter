@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 import { createMetadata } from '@/__private__/storybook'
-import { Table } from '../Table'
 
-import mdx from './Table.docs.mdx'
+import mdx from './UseRcTableAdapter.docs.mdx'
 import { boolean, select } from '@storybook/addon-knobs'
-import { defaultPropSize, propSize } from '../../useRcTableAdapter/helper'
+import { defaultPropSize, propSize } from '../helper'
 import {
   columns,
   data as mockData,
@@ -13,6 +12,8 @@ import {
   groupColumns,
   groupData,
 } from '../__mock__/mock.data'
+import { default as RCTable } from 'rc-table'
+import { useRcTableAdapter } from '@/useRcTableAdapter/useRcTableAdapter'
 
 const getKnobs = () => ({
   sticky: boolean('sticky', false),
@@ -62,25 +63,24 @@ export function Playground() {
     setData(getData())
   }, [expandable, grouped, emptyData])
 
-  return (
-    <Table
-      size={size}
-      sticky={sticky}
-      defaultExpandAllRows
-      borderBetweenColumns={borderBetweenColumns}
-      borderBetweenRows={borderBetweenRows}
-      zebraStriped={zebraStriped === '' ? undefined : zebraStriped}
-      headerVerticalAlign={headerVerticalAlign}
-      verticalAlign={verticalAlign}
-      columns={grouped ? groupColumns : columns}
-      data={data}
-    />
-  )
+  const tableProps = useRcTableAdapter({
+    size,
+    sticky,
+    borderBetweenColumns,
+    borderBetweenRows,
+    zebraStriped: zebraStriped === '' ? undefined : zebraStriped,
+    headerVerticalAlign,
+    verticalAlign,
+    columns: grouped ? groupColumns : columns,
+    data,
+  })
+
+  return <RCTable {...tableProps} />
 }
 
 export default createMetadata({
-  title: 'Компоненты|/Table',
-  id: 'components/Table',
+  title: 'Hooks/UseRcTableAdapterExample',
+  id: 'hooks/UseRcTableAdapterExample',
   parameters: {
     docs: {
       page: mdx,

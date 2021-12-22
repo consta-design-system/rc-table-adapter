@@ -8,10 +8,10 @@
 
 ```sh
 # NPM
-$ npm install @consta/table
+$ npm install @consta/rc-table-adapter
 
 # Yarn
-$ yarn add @consta/table
+$ yarn add @consta/rc-table-adapter
 ```
 
 ## Подключите зависимости
@@ -24,7 +24,7 @@ $ yarn add @consta/table
 
 ```js
 import { Theme, presetGpnDefault } from '@consta/uikit/Theme'
-import { Table } from '@consta/table'
+import { Table } from '@consta/rc-table-adapter'
 
 const data = [
   { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
@@ -90,7 +90,7 @@ $ yarn test
 
 ## Документация
 
-[Посмотреть документацию и примеры](https://rc-table.vercel.app/)
+[Посмотреть документацию и примеры](https://rc-table-adapter.vercel.app/)
 
 ## Контрибьюторам
 

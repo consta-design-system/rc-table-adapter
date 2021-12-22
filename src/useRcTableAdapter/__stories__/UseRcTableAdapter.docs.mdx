@@ -1,14 +1,14 @@
-import { TableExample } from './examples/TableExample/TableExample'
+import { TableExample } from './examples/UseRcTableAdapterExample/UseRcTableAdapterExample'
 
 import {
   RemadeInfo,
   RemadeTableInfo,
 } from '@/__private__/storybook/components/RemadeInfo/RemadeInfo'
 
-# Table
+# useRcTableAdapter
 
 ```tsx
-import { Table } from '@consta/table'
+import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
 ```
 
 Компонент для создания сложных таблиц. Его стоит использовать,
@@ -41,11 +41,9 @@ import { Table } from '@consta/table'
 в свойстве `column` — объект с описанием колонок.
 
 ```tsx
-
-const data = [
-  { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
-  { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
-]
+import React from 'react'
+import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
+import { default as RCTable } from 'rc-table'
 
 const columns = [
   {
@@ -74,7 +72,17 @@ const columns = [
   },
 ]
 
-<Table dataSource={data} columns={columns} />
+const data = [
+  { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
+  { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
+]
+
+export function TableExample() {
+  const tableProps = useRcTableAdapter({ columns, data })
+
+  return <RCTable {...tableProps} />
+}
+
 ```
 
 <TableExample />
@@ -82,7 +90,7 @@ const columns = [
 ## Импорт
 
 ```tsx
-import { Table } from '@consta/table'
+import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
 ```
 
 ## Свойства

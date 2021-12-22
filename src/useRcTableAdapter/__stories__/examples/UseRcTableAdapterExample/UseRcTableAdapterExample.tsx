@@ -1,6 +1,6 @@
 import React from 'react'
-
-import { Table } from '../../../Table'
+import { useRcTableAdapter } from '@/useRcTableAdapter/useRcTableAdapter'
+import { default as RCTable } from 'rc-table'
 
 const columns = [
   {
@@ -35,5 +35,7 @@ const data = [
 ]
 
 export function TableExample() {
-  return <Table columns={columns} data={data} />
+  const tableProps = useRcTableAdapter({ columns, data })
+
+  return <RCTable {...tableProps} />
 }
