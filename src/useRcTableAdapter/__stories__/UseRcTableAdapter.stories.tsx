@@ -28,8 +28,6 @@ const getKnobs = () => ({
   headerVerticalAlign: select('headerVerticalAlign', ['center', 'bottom'], 'center'),
 })
 
-type TableData = { [key: string]: string | number | TableData }
-
 export function Playground() {
   const {
     size,
@@ -44,7 +42,7 @@ export function Playground() {
     grouped,
   } = getKnobs()
 
-  const [data, setData] = useState<TableData[]>([])
+  const [data, setData] = useState<Array<Record<string, unknown>>>([])
 
   useEffect(() => {
     const getData = () => {
@@ -65,22 +63,26 @@ export function Playground() {
 
   const tableProps = useRcTableAdapter({
     size,
-    sticky,
     borderBetweenColumns,
     borderBetweenRows,
     zebraStriped: zebraStriped === '' ? undefined : zebraStriped,
     headerVerticalAlign,
     verticalAlign,
-    columns: grouped ? groupColumns : columns,
-    data,
   })
 
-  return <RCTable {...tableProps} />
+  return (
+    <RCTable
+      {...tableProps}
+      sticky={sticky}
+      columns={grouped ? groupColumns : columns}
+      data={data}
+    />
+  )
 }
 
 export default createMetadata({
-  title: 'Hooks/UseRcTableAdapterExample',
-  id: 'hooks/UseRcTableAdapterExample',
+  title: 'Hooks/UseRcTableAdapter',
+  id: 'hooks/UseRcTableAdapter',
   parameters: {
     docs: {
       page: mdx,

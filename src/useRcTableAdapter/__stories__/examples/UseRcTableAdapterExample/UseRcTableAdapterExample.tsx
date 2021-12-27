@@ -29,13 +29,13 @@ const columns = [
   },
 ]
 
-const data = [
+const data: Array<Record<string, unknown>> = [
   { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
   { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
 ]
 
 export function TableExample() {
-  const tableProps = useRcTableAdapter({ columns, data })
+  const tableProps = useRcTableAdapter()
 
-  return <RCTable {...tableProps} />
+  return <RCTable {...tableProps} data={data} columns={columns} />
 }

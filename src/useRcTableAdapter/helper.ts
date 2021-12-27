@@ -1,13 +1,6 @@
 import React from 'react'
 
-import {
-  ColumnsType,
-  ColumnType,
-  ExpandableConfig,
-  GetComponentProps,
-  RenderExpandIcon,
-} from 'rc-table/lib/interface'
-import { TableProps } from 'rc-table/lib/Table'
+import { RenderExpandIcon } from 'rc-table/lib/interface'
 
 export const propSize = ['s', 'm', 'l'] as const
 export type PropSize = typeof propSize[number]
@@ -20,27 +13,14 @@ export type DefaultItem = {
   chlidren?: DefaultItem[]
 }
 
-type ExcludeProps =
-  | 'data'
-  | 'children'
-  | 'columns'
-  | 'expandable'
-  | 'onHeaderRow'
-  | 'transformColumns'
-  | 'expandIcon'
-  | 'prefixCls'
-
-export type RcTableProps<ITEM extends {} = DefaultItem> = Omit<TableProps, ExcludeProps> & {
-  data?: ITEM[]
-  columns?: ColumnsType<ITEM>
-  expandable?: ExpandableConfig<ITEM>
-  onHeaderRow?: GetComponentProps<ReadonlyArray<ColumnType<ITEM>>>
-  transformColumns?: (columns: ColumnsType<ITEM>) => ColumnsType<ITEM>
+export type UseRcTableAdapterResults<ITEM extends {} = DefaultItem> = {
+  indentSize?: number
   expandIcon?: RenderExpandIcon<ITEM>
   prefixCls?: string
+  emptyText?: string
 }
 
-export type UseRcTableAdapterProps<ITEM = unknown> = RcTableProps<ITEM> & {
+export type UseRcTableAdapterProps<ITEM = unknown> = UseRcTableAdapterResults<ITEM> & {
   size?: PropSize
   zebraStriped?: 'odd' | 'even'
   borderBetweenColumns?: boolean
@@ -48,3 +28,7 @@ export type UseRcTableAdapterProps<ITEM = unknown> = RcTableProps<ITEM> & {
   verticalAlign?: 'top' | 'center' | 'bottom'
   headerVerticalAlign?: 'center' | 'bottom'
 }
+
+export type UseRcTableAdapter<ITEM = unknown> = (
+  props: UseRcTableAdapterProps<ITEM>
+) => UseRcTableAdapterResults<ITEM>
