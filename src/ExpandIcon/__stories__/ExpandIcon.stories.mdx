@@ -15,15 +15,17 @@ import { ExpandIcon } from '@consta/rc-table-adapter/ExpandIcon'
 
 ```tsx
 const Example = () => {
-  const prefix = cnRcTable({
-    size: 's',
-    zebraStriped: 'odd',
-    borderBetweenColumns: true,
-    borderBetweenRows: true,
-    verticalAlign: 'center',
-    headerVerticalAlign: 'center',
-    prefixCls: 'CustomTable',
-  })
+  const prefix = cnRcTable(
+    {
+      size: 's',
+      zebraStriped: 'odd',
+      borderBetweenColumns: true,
+      borderBetweenRows: true,
+      verticalAlign: 'center',
+      headerVerticalAlign: 'center',
+    },
+    ['CustomTable']
+  )
 
   return <RCTable expandIcon={ExpandIcon} prefixCls={prefix} data={data} columns={columns} />
 }

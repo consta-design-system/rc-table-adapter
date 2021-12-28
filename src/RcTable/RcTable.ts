@@ -12,12 +12,11 @@ type CnRcTableProps = {
   borderBetweenRows?: boolean
   verticalAlign?: 'top' | 'center' | 'bottom'
   headerVerticalAlign?: 'center' | 'bottom'
-  prefixCls?: string
 }
 
-type CnRcTable = (props?: CnRcTableProps) => string
+type CnRcTable = (props?: CnRcTableProps, classNames?: Array<string | undefined>) => string
 
-export const cnRcTable: CnRcTable = props => {
+export const cnRcTable: CnRcTable = (props, classNames) => {
   const params = props || ({} as CnRcTableProps)
   const {
     size = 's',
@@ -26,7 +25,6 @@ export const cnRcTable: CnRcTable = props => {
     borderBetweenRows = true,
     verticalAlign = 'top',
     headerVerticalAlign = 'center',
-    prefixCls,
   } = params
   return cnTable(
     {
@@ -37,7 +35,7 @@ export const cnRcTable: CnRcTable = props => {
       verticalAlign,
       headerVerticalAlign,
     },
-    [prefixCls]
+    classNames
   )
     .split(' ')
     .reverse()

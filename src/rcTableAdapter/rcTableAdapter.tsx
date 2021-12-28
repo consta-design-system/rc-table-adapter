@@ -20,15 +20,17 @@ export function rcTableAdapter<ITEM extends {} = DefaultItem>(
     indentSize = 24,
   } = params
 
-  const prefix = cnRcTable({
-    size,
-    zebraStriped,
-    borderBetweenColumns,
-    borderBetweenRows,
-    verticalAlign,
-    headerVerticalAlign,
-    prefixCls,
-  })
+  const prefix = cnRcTable(
+    {
+      size,
+      zebraStriped,
+      borderBetweenColumns,
+      borderBetweenRows,
+      verticalAlign,
+      headerVerticalAlign,
+    },
+    [prefixCls]
+  )
 
   return {
     prefixCls: prefix,
