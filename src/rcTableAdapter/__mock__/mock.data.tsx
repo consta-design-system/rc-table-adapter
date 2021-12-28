@@ -99,36 +99,36 @@ export const expandData = [
 
 export const groupColumns = [
   {
-    title: '姓名',
+    title: 'Имя',
     dataIndex: 'name',
     key: 'name',
   },
   {
-    title: '其它',
+    title: 'Разное',
     children: [
       {
-        title: '年龄',
+        title: 'Возраст',
         dataIndex: 'age',
         key: 'age',
       },
       {
-        title: '住址',
+        title: 'Адрес',
         children: [
           {
-            title: '街道',
+            title: 'Улица',
             dataIndex: 'street',
             key: 'street',
           },
           {
-            title: '小区',
+            title: 'Сообщество',
             children: [
               {
-                title: '单元',
+                title: 'Здание',
                 dataIndex: 'building',
                 key: 'building',
               },
               {
-                title: '门牌',
+                title: 'Номер',
                 dataIndex: 'number',
                 key: 'number',
               },
@@ -139,22 +139,22 @@ export const groupColumns = [
     ],
   },
   {
-    title: '公司',
+    title: 'Компания',
     children: [
       {
-        title: '地址',
+        title: 'Адрес',
         dataIndex: 'companyAddress',
         key: 'companyAddress',
       },
       {
-        title: '名称',
+        title: 'Название',
         dataIndex: 'companyName',
         key: 'companyName',
       },
     ],
   },
   {
-    title: '性别',
+    title: 'Пол',
     dataIndex: 'gender',
     key: 'gender',
   },
@@ -163,24 +163,24 @@ export const groupColumns = [
 export const groupData = [
   {
     key: '1',
-    name: '胡彦斌',
+    name: 'Иван',
     age: 32,
-    street: '拱墅区和睦街道',
+    street: 'ул. Мира',
     building: 1,
     number: 2033,
-    companyAddress: '西湖区湖底公园',
-    companyName: '湖底有限公司',
-    gender: '男',
+    companyAddress: 'ул. Летняя',
+    companyName: 'ООО Зима',
+    gender: 'муж.',
   },
   {
     key: '2',
-    name: '胡彦祖',
+    name: 'Анна',
     age: 42,
-    street: '拱墅区和睦街道',
+    street: 'пл. Ленина',
     building: 3,
     number: 2035,
-    companyAddress: '西湖区湖底公园',
-    companyName: '湖底有限公司',
-    gender: '男',
+    companyAddress: 'пр. Гражданский',
+    companyName: 'ИП Карамель',
+    gender: 'жен.',
   },
 ]

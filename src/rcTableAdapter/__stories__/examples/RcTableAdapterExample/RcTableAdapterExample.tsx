@@ -1,6 +1,6 @@
 import React from 'react'
-
-import { Table } from '../../../Table'
+import { rcTableAdapter } from '@/rcTableAdapter/rcTableAdapter'
+import { default as RCTable } from 'rc-table'
 
 const columns = [
   {
@@ -29,11 +29,13 @@ const columns = [
   },
 ]
 
-const data = [
+const data: Array<Record<string, unknown>> = [
   { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
   { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
 ]
 
 export function TableExample() {
-  return <Table columns={columns} data={data} />
+  const tableProps = rcTableAdapter()
+
+  return <RCTable {...tableProps} data={data} columns={columns} />
 }

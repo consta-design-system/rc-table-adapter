@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
 
 import { createMetadata } from '@/__private__/storybook'
-import { Table } from '../Table'
 
-import mdx from './Table.docs.mdx'
+import mdx from './RcTableAdapter.docs.mdx'
 import { boolean, select } from '@storybook/addon-knobs'
-import { defaultPropSize, propSize } from '../../useRcTableAdapter/helper'
+import { defaultPropSize, propSize } from '../helper'
 import {
   columns,
   data as mockData,
@@ -13,6 +12,8 @@ import {
   groupColumns,
   groupData,
 } from '../__mock__/mock.data'
+import { default as RCTable } from 'rc-table'
+import { rcTableAdapter } from '@/rcTableAdapter/rcTableAdapter'
 
 const getKnobs = () => ({
   sticky: boolean('sticky', false),
@@ -26,8 +27,6 @@ const getKnobs = () => ({
   verticalAlign: select('verticalAlign', ['top', 'center', 'bottom'], 'top'),
   headerVerticalAlign: select('headerVerticalAlign', ['center', 'bottom'], 'center'),
 })
-
-type TableData = { [key: string]: string | number | TableData }
 
 export function Playground() {
   const {
@@ -43,7 +42,7 @@ export function Playground() {
     grouped,
   } = getKnobs()
 
-  const [data, setData] = useState<TableData[]>([])
+  const [data, setData] = useState<Array<Record<string, unknown>>>([])
 
   useEffect(() => {
     const getData = () => {
@@ -62,16 +61,19 @@ export function Playground() {
     setData(getData())
   }, [expandable, grouped, emptyData])
 
+  const tableProps = rcTableAdapter({
+    size,
+    borderBetweenColumns,
+    borderBetweenRows,
+    zebraStriped: zebraStriped === '' ? undefined : zebraStriped,
+    headerVerticalAlign,
+    verticalAlign,
+  })
+
   return (
-    <Table
-      size={size}
+    <RCTable
+      {...tableProps}
       sticky={sticky}
-      defaultExpandAllRows
-      borderBetweenColumns={borderBetweenColumns}
-      borderBetweenRows={borderBetweenRows}
-      zebraStriped={zebraStriped === '' ? undefined : zebraStriped}
-      headerVerticalAlign={headerVerticalAlign}
-      verticalAlign={verticalAlign}
       columns={grouped ? groupColumns : columns}
       data={data}
     />
@@ -79,8 +81,8 @@ export function Playground() {
 }
 
 export default createMetadata({
-  title: 'Компоненты|/Table',
-  id: 'components/Table',
+  title: 'Utils/RcTableAdapter',
+  id: 'Utils/RcTableAdapter',
   parameters: {
     docs: {
       page: mdx,

@@ -1,0 +1,103 @@
+import { TableExample } from './examples/RcTableAdapterExample/RcTableAdapterExample'
+
+import {
+  RemadeInfo,
+  RemadeTableInfo,
+} from '@/__private__/storybook/components/RemadeInfo/RemadeInfo'
+
+# useRcTableAdapter
+
+```tsx
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
+```
+
+Этот хук адаптирует таблицу — компонент `Table` из библиотеки [rc-table](https://github.com/react-component/table) — для [дизайн-системы Consta](https://consta.gazprom-neft.ru/). Его стоит использовать, если не хватает возможностей стандартного компонента
+[Table](https://consta-uikit.vercel.app/?path=/docs/components-table--custom-rows).
+
+- [Создание таблицы](#создание-таблицы)
+- [Импорт](#импорт)
+- [Список свойств](#свойства)
+
+## Создание таблицы
+
+Создайте объект с данными для колонок:
+
+- `title` — заголовок колонки,
+- `dataIndex` — имя поля, из которого берутся данные для этой колонки,
+- `key` — идентификатор колонки.
+
+Создайте объект с описанием строк.
+В поле `key` укажите идентификатор строки (обычно это номер по порядку).
+
+Перед тем, как вывести таблицу, оберните данные в `useRcTableAdapter`.
+
+```tsx
+import React from 'react'
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
+import { default as RCTable } from 'rc-table'
+
+const columns = [
+  {
+    title: 'Кто',
+    dataIndex: 'name',
+    key: 'name',
+    width: 150,
+  },
+  {
+    title: 'Что делает',
+    dataIndex: 'occupation',
+    key: 'occupation',
+    width: 150,
+  },
+  {
+    title: 'Где',
+    dataIndex: 'address',
+    key: 'address',
+    width: 150,
+  },
+  {
+    title: 'Как помочь',
+    dataIndex: '',
+    key: 'operations',
+    render: () => <p>Покормить печеньем</p>,
+  },
+]
+
+const data = [
+  { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
+  { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
+]
+
+export function TableExample() {
+  const tableProps = rcTableAdapter()
+
+  return <RCTable {...tableProps} columns={columns} data={data} />
+}
+```
+
+<TableExample />
+
+## Импорт
+
+```tsx
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
+```
+
+## Свойства
+
+<RemadeTableInfo apiUrl="https://github.com/react-component/table" />
+
+### Атрибуты строк
+
+| Свойство                   | Тип и значения | По умолчанию | Описание                        |
+| -------------------------- | -------------- | ------------ | ------------------------------- |
+| [`key`](#создание-таблицы) | `string`       | -            | Уникальный идентификатор строки |
+
+### Атрибуты колонок
+
+| Свойство                          | Тип и значения           | По умолчанию | Описание                                              |
+| --------------------------------- | ------------------------ | ------------ | ----------------------------------------------------- |
+| [`key?`](#создание-таблицы)       | `string`                 | -            | Уникальный идентификатор колонки                      |
+| [`title?`](#создание-таблицы)     | `string`                 | -            | Название колонки                                      |
+| [`dataIndex?`](#создание-таблицы) | `string`                 | -            | Имя поля, из которого берутся данные для этой колонки |
+| `width?`                          | `string` &#124; `number` | -            | Ширина колонки                                        |
