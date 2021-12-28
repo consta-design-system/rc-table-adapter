@@ -1,4 +1,4 @@
-import { TableExample } from './examples/UseRcTableAdapterExample/UseRcTableAdapterExample'
+import { TableExample } from './examples/RcTableAdapterExample/RcTableAdapterExample'
 
 import {
   RemadeInfo,
@@ -8,7 +8,7 @@ import {
 # useRcTableAdapter
 
 ```tsx
-import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
 ```
 
 Этот хук адаптирует таблицу — компонент `Table` из библиотеки [rc-table](https://github.com/react-component/table) — для [дизайн-системы Consta](https://consta.gazprom-neft.ru/). Его стоит использовать, если не хватает возможностей стандартного компонента
@@ -33,7 +33,7 @@ import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
 
 ```tsx
 import React from 'react'
-import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
 import { default as RCTable } from 'rc-table'
 
 const columns = [
@@ -69,9 +69,9 @@ const data = [
 ]
 
 export function TableExample() {
-  const tableProps = useRcTableAdapter({ columns, data })
+  const tableProps = rcTableAdapter()
 
-  return <RCTable {...tableProps} />
+  return <RCTable {...tableProps} columns={columns} data={data} />
 }
 ```
 
@@ -80,7 +80,7 @@ export function TableExample() {
 ## Импорт
 
 ```tsx
-import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
 ```
 
 ## Свойства

@@ -13,14 +13,14 @@ export type DefaultItem = {
   chlidren?: DefaultItem[]
 }
 
-export type UseRcTableAdapterResults<ITEM extends {} = DefaultItem> = {
+export type RcTableAdapterResults<ITEM extends {} = DefaultItem> = {
   indentSize?: number
   expandIcon?: RenderExpandIcon<ITEM>
   prefixCls?: string
   emptyText?: string
 }
 
-export type UseRcTableAdapterProps<ITEM = unknown> = UseRcTableAdapterResults<ITEM> & {
+export type RcTableAdapterProps<ITEM = unknown> = RcTableAdapterResults<ITEM> & {
   size?: PropSize
   zebraStriped?: 'odd' | 'even'
   borderBetweenColumns?: boolean
@@ -29,6 +29,6 @@ export type UseRcTableAdapterProps<ITEM = unknown> = UseRcTableAdapterResults<IT
   headerVerticalAlign?: 'center' | 'bottom'
 }
 
-export type UseRcTableAdapter<ITEM = unknown> = (
-  props: UseRcTableAdapterProps<ITEM>
-) => UseRcTableAdapterResults<ITEM>
+export type RcTableAdapter<ITEM = unknown> = (
+  props: RcTableAdapterProps<ITEM>
+) => RcTableAdapterResults<ITEM>

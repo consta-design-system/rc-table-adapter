@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRcTableAdapter } from '@/useRcTableAdapter/useRcTableAdapter'
+import { rcTableAdapter } from '@/rcTableAdapter/rcTableAdapter'
 import { default as RCTable } from 'rc-table'
 
 const columns = [
@@ -35,7 +35,7 @@ const data: Array<Record<string, unknown>> = [
 ]
 
 export function TableExample() {
-  const tableProps = useRcTableAdapter()
+  const tableProps = rcTableAdapter()
 
   return <RCTable {...tableProps} data={data} columns={columns} />
 }

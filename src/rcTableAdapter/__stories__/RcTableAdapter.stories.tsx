@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 
 import { createMetadata } from '@/__private__/storybook'
 
-import mdx from './UseRcTableAdapter.docs.mdx'
+import mdx from './RcTableAdapter.docs.mdx'
 import { boolean, select } from '@storybook/addon-knobs'
 import { defaultPropSize, propSize } from '../helper'
 import {
@@ -13,7 +13,7 @@ import {
   groupData,
 } from '../__mock__/mock.data'
 import { default as RCTable } from 'rc-table'
-import { useRcTableAdapter } from '@/useRcTableAdapter/useRcTableAdapter'
+import { rcTableAdapter } from '@/rcTableAdapter/rcTableAdapter'
 
 const getKnobs = () => ({
   sticky: boolean('sticky', false),
@@ -61,7 +61,7 @@ export function Playground() {
     setData(getData())
   }, [expandable, grouped, emptyData])
 
-  const tableProps = useRcTableAdapter({
+  const tableProps = rcTableAdapter({
     size,
     borderBetweenColumns,
     borderBetweenRows,
@@ -81,8 +81,8 @@ export function Playground() {
 }
 
 export default createMetadata({
-  title: 'Hooks/UseRcTableAdapter',
-  id: 'hooks/UseRcTableAdapter',
+  title: 'Utils/RcTableAdapter',
+  id: 'Utils/RcTableAdapter',
   parameters: {
     docs: {
       page: mdx,

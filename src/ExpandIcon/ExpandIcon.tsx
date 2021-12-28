@@ -1,15 +1,18 @@
-import { cnTable } from '@/customPrefixCls/customPrefixCls'
-import { IconArrowDown } from '@consta/uikit/IconArrowDown'
-import { RenderExpandIconProps } from 'rc-table/lib/interface'
 import React from 'react'
 
-import '@/useRcTableAdapter/UseRcTableAdapter.css'
+import { cn } from '@/__private__/utils/bem'
+import { IconArrowDown } from '@consta/uikit/IconArrowDown'
+import { RenderExpandIconProps } from 'rc-table/lib/interface'
 
-export function CustomExpandIcon<ITEM>(params: RenderExpandIconProps<ITEM>) {
+import './ExpandIcon.css'
+
+const cnExpandIcon = cn('ExpandIcon')
+
+export function ExpandIcon<ITEM>(params: RenderExpandIconProps<ITEM>) {
   const { onExpand, record, expandable, expanded } = params
   return (
     <IconArrowDown
-      className={cnTable('icon', {
+      className={cnExpandIcon({
         expanded,
         hidden: !(Array.isArray(expandable) && expandable.length > 0),
       })}

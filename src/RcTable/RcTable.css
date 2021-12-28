@@ -1,4 +1,4 @@
-.rc-table {
+.RcTable {
   --table-cell-vertical: var(--space-2xs);
   --table-cell-horizontal: var(--space-xs);
   --table-row-color-first: transparent;
@@ -7,6 +7,7 @@
   --table-header-align: middle;
   --default-margin-icon: var(--space-2xs);
   --table-row-opacity: 0;
+  color: var(--color-typo-primary);
 
   &_size {
     &_s {
@@ -63,7 +64,7 @@
     &_top {
       --table-verticalAlign: top;
 
-      & .rc-table-icon {
+      & .ExpandIcon {
         margin-top: var(--default-margin-icon);
       }
     }
@@ -75,7 +76,7 @@
     &_bottom {
       --table-verticalAlign: bottom;
 
-      & .rc-table-icon {
+      & .ExpandIcon {
         margin-bottom: var(--default-margin-icon);
       }
     }
@@ -92,7 +93,7 @@
   }
 
   &-thead {
-    & .rc-table-cell {
+    & .RcTable-cell {
       font-size: var(--size-text-xs);
       font-weight: bold;
       line-height: var(--line-height-text-s);
@@ -102,7 +103,7 @@
   }
 
   &-tbody {
-    & .rc-table-cell {
+    & .RcTable-cell {
       font-size: var(--size-text-s);
       font-weight: normal;
       line-height: var(--line-height-text-m);
@@ -112,24 +113,6 @@
   &-cell {
     height: max-content;
     padding: var(--table-cell-vertical) var(--table-cell-horizontal);
-  }
-
-  &-icon {
-    padding-right: var(--space-xs);
-
-    cursor: pointer;
-
-    & svg {
-      transition: transform 0.3s;
-    }
-
-    &_expanded svg {
-      transform: rotate(180deg);
-    }
-
-    &_hidden {
-      visibility: hidden;
-    }
   }
 
   table {
@@ -154,8 +137,8 @@
     }
   }
 
-  &.rc-table_zebraStriped_odd,
-  &.rc-table_zebraStriped_even {
+  &.RcTable_zebraStriped_odd,
+  &.RcTable_zebraStriped_even {
     & tbody tr {
       --row-background: var(--table-row-color-first);
       background-color: var(--row-background);
@@ -169,7 +152,7 @@
   tbody > tr {
     max-height: calc(var(--table-cell-vertical) + var(--line-height-text-m));
 
-    &.rc-table-row-level {
+    &.RcTable-row-level:not(.RcTable_zebraStriped_odd):not(.RcTable_zebraStriped_even) {
       &-0 {
         background-color: rgba(0, 32, 51, 0);
       }
@@ -199,7 +182,7 @@
       vertical-align: var(--table-verticalAlign);
     }
 
-    &:not(.rc-table-placeholder):hover {
+    &:not(.RcTable-placeholder):hover {
       background-color: var(--color-bg-ghost);
     }
   }

@@ -1,11 +1,11 @@
 import { cn } from '@/__private__/utils/bem'
-import { PropSize } from '@/useRcTableAdapter/helper'
+import { PropSize } from '@/rcTableAdapter/helper'
 
-import '@/useRcTableAdapter/UseRcTableAdapter.css'
+import './RcTable.css'
 
-export const cnTable = cn('rc-table')
+export const cnTable = cn('RcTable')
 
-type CustomPrefixClsProps = {
+type CnRcTableProps = {
   size?: PropSize
   zebraStriped?: 'odd' | 'even'
   borderBetweenColumns?: boolean
@@ -15,10 +15,10 @@ type CustomPrefixClsProps = {
   prefixCls?: string
 }
 
-type CustomPrefixCls = (props?: CustomPrefixClsProps) => string
+type CnRcTable = (props?: CnRcTableProps) => string
 
-export const customPrefixCls: CustomPrefixCls = props => {
-  const params = props || ({} as CustomPrefixClsProps)
+export const cnRcTable: CnRcTable = props => {
+  const params = props || ({} as CnRcTableProps)
   const {
     size = 's',
     zebraStriped,
