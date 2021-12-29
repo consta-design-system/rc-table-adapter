@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.0.0 (29/12/2021)
+- [docs(RcTableAdapter): edit docs (#10)](https://github.com/gazprom-neft/rc-table-adapter/commit/4c649912d14b59c8773b85632d9c22a92d832a8b) - [@arhayka](https://github.com/arhayka)
+- [ feat(useRcTableAdapter): remove all table imports, rewrite docs and change example (#8)](https://github.com/gazprom-neft/rc-table-adapter/commit/9ca152243d3e64cf9beb8eaca08337530c82ba8b) - [@N1MBER](https://github.com/N1MBER)
+- [docs(Logo): add new logo for lib (#9)](https://github.com/gazprom-neft/rc-table-adapter/commit/4874f3840e6a8cb343abedfab573a4712757597a) - [@N1MBER](https://github.com/N1MBER)
+- [Feat/table (#7)](https://github.com/gazprom-neft/rc-table-adapter/commit/c863dc20e624acc6d411f00a1f94fbeff29753cb) - [@N1MBER](https://github.com/N1MBER)
+- [chore(deps): edit deps](https://github.com/gazprom-neft/rc-table-adapter/commit/cb0a23aa3e38d0e859a37347c125e9cb7b476ceb) - [@gizeasy](https://github.com/gizeasy)
+- [redeploy](https://github.com/gazprom-neft/rc-table-adapter/commit/751f06d07870f7199ca8f402640e96a559fe35e8) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v0.1.3 (21/10/2021)
 - [feat(Table): add default styles (#5)](https://github.com/gazprom-neft/table/commit/fd20f3391625a2cd27899d9d35df53a003732988) - [@N1MBER](https://github.com/N1MBER)
 
