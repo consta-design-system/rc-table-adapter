@@ -1,6 +1,6 @@
-# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | useRcTableAdapter
+# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | RcTableAdapter
 
-Хук useRcTableAdapter адаптирует таблицы [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Адаптер RcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
 # Как использовать
 
@@ -102,7 +102,7 @@ $ yarn test
 
 ## Документация
 
-[Посмотреть документацию и примеры](https://rc-table-adapter.vercel.app/)
+[Посмотреть документацию и примеры](https://consta-table.vercel.app/)
 
 ## Контрибьюторам
 
