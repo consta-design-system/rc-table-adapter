@@ -4,17 +4,24 @@ import { Meta } from '@storybook/addon-docs/blocks'
 
 # RcTableAdapter | Дизайн-система Consta
 
-Этот хук адаптирует таблицы из библиотеки [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Адптер для таблицы из библиотеки [rc-table](https://github.com/react-component/table). Стилизует таблицу для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
 ## Быстрый старт
 
 #### Установите пакет и зависимости
 
-`yarn add @consta/rc-table-adapter` или `npm install @consta/rc-table-adapter`
+`yarn add @consta/uikit @consta/rc-table-adapter` или `npm install @consta/uikit @consta/rc-table-adapter`
 
 #### Подключите тему
 
-Тему обязательно нужно подключать в корне приложения, так, чтобы все компоненты были вложены в компонент `Theme`.
+Тему обязательно нужно подключать в корне приложения, так, чтобы все компоненты были вложены в [компонент `Theme`](https://consta-uikit.vercel.app/?path=/docs/components-theme--playground).
+
+#### Создайте стилизованную таблицу
+
+Есть два варианта:
+
+- Подключите миксин [RcTable](?path=/docs/rctable--page) — он добавит таблице стили из Consta. Если нужно скрыть часть таблицы, используйте иконку [ExpandIcon](?path=/docs/expandicon--page).
+- Подключите адаптер [RcTableAdapter](?path=/docs/utils-rctableadapter--playground), чтобы добавить стили, иконки и значения по умолчанию для некоторых свойств.
 
 #### Всë!
 

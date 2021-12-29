@@ -23,7 +23,7 @@ export const columns = [
     title: 'Поддержать',
     dataIndex: '',
     key: 'operations',
-    render: () => <p>Покормить печеньем</p>,
+    render: () => <div>Покормить печеньем</div>,
   },
 ]
 
@@ -35,53 +35,53 @@ export const data = [
 export const expandData = [
   {
     key: '1',
-    name: 'a',
-    address: 'I am a',
-    occupation: 'работает',
+    name: '1',
+    address: 'место 1',
+    occupation: 'задача 1',
     children: [
       {
         key: '11',
-        name: 'aa',
-        address: 'I am aa',
-        occupation: 'работает',
+        name: '1.1',
+        address: 'место 1.1',
+        occupation: 'задача 1.1',
       },
       {
         key: '12',
-        name: 'ab',
-        address: 'I am ab',
-        occupation: 'работает',
+        name: '1.2',
+        address: 'место 1.2',
+        occupation: 'задача 1.2',
         children: [
           {
             key: '121',
-            name: 'aba',
-            address: 'I am aba',
-            occupation: 'работает',
+            name: '1.2.1',
+            address: 'место 1.2.1',
+            occupation: 'задача 1.2.1',
           },
         ],
       },
       {
         key: '13',
-        name: 'ac',
-        address: 'I am ac',
-        occupation: 'работает',
+        name: '1.3',
+        address: 'место 1.3',
+        occupation: 'задача 1.3',
         children: [
           {
             key: '131',
-            name: 'aca',
-            address: 'I am aca',
-            occupation: 'работает',
+            name: '1.3.1',
+            address: 'место 1.3.1',
+            occupation: 'задача 1.3.1',
             children: [
               {
                 key: '1311',
-                name: 'acaa',
-                address: 'I am acaa',
-                occupation: 'работает',
+                name: '1.3.1.1',
+                address: 'место 1.3.1.1',
+                occupation: 'задача 1.3.1.1',
               },
               {
                 key: '1312',
-                name: 'acab',
-                address: 'I am acab',
-                occupation: 'работает',
+                name: '1.3.1.2',
+                address: 'место 1.3.1.2',
+                occupation: 'задача 1.3.1.2',
               },
             ],
           },
@@ -91,9 +91,9 @@ export const expandData = [
   },
   {
     key: '2',
-    name: 'b',
-    address: 'I am b',
-    occupation: 'работает',
+    name: '2',
+    address: 'место 2',
+    occupation: 'задача 2',
   },
 ]
 
@@ -104,7 +104,7 @@ export const groupColumns = [
     key: 'name',
   },
   {
-    title: 'Разное',
+    title: 'Личные данные',
     children: [
       {
         title: 'Возраст',
@@ -120,15 +120,15 @@ export const groupColumns = [
             key: 'street',
           },
           {
-            title: 'Сообщество',
+            title: 'Здание',
             children: [
               {
-                title: 'Здание',
+                title: 'Дом',
                 dataIndex: 'building',
                 key: 'building',
               },
               {
-                title: 'Номер',
+                title: 'Квартира',
                 dataIndex: 'number',
                 key: 'number',
               },

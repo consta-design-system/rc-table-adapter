@@ -1,6 +1,9 @@
 import React from 'react'
 import { rcTableAdapter } from '@/rcTableAdapter/rcTableAdapter'
 import { default as RCTable } from 'rc-table'
+import { ExpandIcon } from '../../../../ExpandIcon/ExpandIcon'
+
+import { expandData, groupColumns, groupData } from '../../../__mock__/mock.data'
 
 const columns = [
   {
@@ -25,7 +28,7 @@ const columns = [
     title: 'Как помочь',
     dataIndex: '',
     key: 'operations',
-    render: () => <p>Покормить печеньем</p>,
+    render: () => <div>Покормить печеньем</div>,
   },
 ]
 
@@ -38,4 +41,22 @@ export function TableExample() {
   const tableProps = rcTableAdapter()
 
   return <RCTable {...tableProps} data={data} columns={columns} />
+}
+
+export function TableExampleStyles() {
+  const tableProps = rcTableAdapter({ size: 'l', zebraStriped: 'odd', borderBetweenColumns: false })
+
+  return <RCTable {...tableProps} data={data} columns={columns} />
+}
+
+export function TableExampleGrouped() {
+  const tableProps = rcTableAdapter()
+
+  return <RCTable {...tableProps} data={groupData} columns={groupColumns} expandIcon={ExpandIcon} />
+}
+
+export function TableExampleExpand() {
+  const tableProps = rcTableAdapter()
+
+  return <RCTable {...tableProps} data={expandData} columns={columns} expandIcon={ExpandIcon} />
 }
