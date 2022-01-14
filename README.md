@@ -24,7 +24,7 @@ $ yarn add @consta/rc-table-adapter
 
 ```js
 import React from 'react'
-import { useRcTableAdapter } from '@consta/rc-table-adapter/useRcTableAdapter'
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
 import { default as RCTable } from 'rc-table'
 
 const columns = [
@@ -60,9 +60,33 @@ const data = [
 ]
 
 export function TableExample() {
-  const tableProps = useRcTableAdapter({ columns, data })
+  const tableProps = rcTableAdapter({ size: 'l', zebraStriped: 'odd', borderBetweenColumns: false })
 
-  return <RCTable {...tableProps} />
+  return <RCTable data={data} columns={columns} {...tableProps} />
+}
+```
+
+или так:
+
+```js
+import React from 'react'
+import { cnRcTable } from '@consta/rc-table-adapter/RcTable'
+
+import { default as RCTable } from 'rc-table'
+export const RcTableExample = () => {
+  const prefix = cnRcTable(
+    {
+      size: 's',
+      zebraStriped: 'odd',
+      borderBetweenColumns: true,
+      borderBetweenRows: true,
+      verticalAlign: 'center',
+      headerVerticalAlign: 'center',
+    },
+    ['CustomTable']
+  )
+
+  return <RCTable prefixCls={prefix} data={data} columns={columns} />
 }
 ```
 
