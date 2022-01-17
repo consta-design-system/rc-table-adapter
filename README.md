@@ -1,6 +1,6 @@
-# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | RcTableAdapter
+# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | rcTableAdapter
 
-Адаптер RcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
+Адаптер rcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
 # Как использовать
 
