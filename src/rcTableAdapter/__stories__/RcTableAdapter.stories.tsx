@@ -11,6 +11,7 @@ import {
   expandData,
   groupColumns,
   groupData,
+  stickyData,
 } from '../__mock__/mock.data'
 import { default as RCTable } from 'rc-table'
 import { rcTableAdapter } from '@/rcTableAdapter/rcTableAdapter'
@@ -75,7 +76,7 @@ export function Playground() {
       {...tableProps}
       sticky={sticky}
       columns={grouped ? groupColumns : columns}
-      data={data}
+      data={sticky ? stickyData : data}
     />
   )
 }
