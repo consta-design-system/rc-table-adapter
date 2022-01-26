@@ -1,5 +1,16 @@
 # Changelog
 
+## v1.0.1 (26/01/2022)
+Сделали адаптер к таблице [rc-table](https://consta-table.vercel.app/iframe.html?path=/docs/rctable--page): с его помощью эту таблицу можно использовать вместе с другими компонентами дизайн-системы `Consta`.
+
+---
+
+- [docs(Logo): update logo (#12)](https://github.com/consta-design-system/rc-table-adapter/commit/7b00e1f4aaf4003cc72d65801e166b8a1745e520) - [@N1MBER](https://github.com/N1MBER)
+- [chore(workflows): add telegramBot](https://github.com/consta-design-system/rc-table-adapter/commit/13526c3bdffa5fd328d8f227e29fe3e1d53bf3fa) - [@gizeasy](https://github.com/gizeasy)
+- [docs(Docs): update examples on README and also update logo (#11)](https://github.com/consta-design-system/rc-table-adapter/commit/8f571a5af970a8a7398241cfbfeeea6ba1d50df6) - [@N1MBER](https://github.com/N1MBER)
+
+--------------------
+
 ## v1.0.0 (29/12/2021)
 - [docs(RcTableAdapter): edit docs (#10)](https://github.com/gazprom-neft/rc-table-adapter/commit/4c649912d14b59c8773b85632d9c22a92d832a8b) - [@arhayka](https://github.com/arhayka)
 - [ feat(useRcTableAdapter): remove all table imports, rewrite docs and change example (#8)](https://github.com/gazprom-neft/rc-table-adapter/commit/9ca152243d3e64cf9beb8eaca08337530c82ba8b) - [@N1MBER](https://github.com/N1MBER)
