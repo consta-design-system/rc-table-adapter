@@ -1,5 +1,5 @@
 {
-  "name": "@consta/table",
+  "name": "@consta/rc-table-adapter",
   "version": "1.0.1",
   "scripts": {
     "build:css": "NODE_ENV=production postcss 'src/**/*.css' --base src --dir lib",
@@ -141,7 +141,7 @@
     "webpack-merge": "4.2.2"
   },
   "engines": {
-    "node": "12.x",
+    "node": ">=12.x",
     "yarn": ">=1.19.1"
   }
 }
