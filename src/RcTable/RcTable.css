@@ -7,9 +7,6 @@
   --table-header-align: middle;
   --default-margin-icon: var(--space-2xs);
   --table-row-opacity: 0;
-  overflow: auto;
-
-  height: 100%;
 
   color: var(--color-typo-primary);
 
