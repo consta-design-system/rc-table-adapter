@@ -7,6 +7,7 @@
   --table-header-align: middle;
   --default-margin-icon: var(--space-2xs);
   --table-row-opacity: 0;
+
   color: var(--color-typo-primary);
 
   &_size {
@@ -93,16 +94,24 @@
   }
 
   &-thead {
+    background: var(--color-bg-default);
+
     & .RcTable-cell {
       font-size: var(--size-text-xs);
       font-weight: bold;
       line-height: var(--line-height-text-s);
+
+      box-sizing: border-box;
 
       text-align: left;
     }
   }
 
   &-tbody {
+    overflow: auto;
+
+    height: 100%;
+
     & .RcTable-cell {
       font-size: var(--size-text-s);
       font-weight: normal;
@@ -115,7 +124,13 @@
     padding: var(--table-cell-vertical) var(--table-cell-horizontal);
   }
 
-  table {
+  &-body {
+    height: 100%;
+  }
+
+  & table {
+    width: 100%;
+
     border-spacing: 0;
   }
 
@@ -188,9 +203,14 @@
   }
 
   &-sticky {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+
     &-holder {
       position: sticky;
       z-index: 2;
+      top: 0;
     }
   }
 

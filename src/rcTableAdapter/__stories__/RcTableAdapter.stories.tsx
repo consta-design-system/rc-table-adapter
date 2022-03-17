@@ -56,11 +56,14 @@ export function Playground() {
       if (expandable) {
         return expandData
       }
+      if (sticky) {
+        return stickyData
+      }
       return mockData
     }
 
     setData(getData())
-  }, [expandable, grouped, emptyData])
+  }, [expandable, grouped, emptyData, sticky])
 
   const tableProps = rcTableAdapter({
     size,
@@ -75,8 +78,9 @@ export function Playground() {
     <RCTable
       {...tableProps}
       sticky={sticky}
+      style={{ maxHeight: 500, width: '80%' }}
       columns={grouped ? groupColumns : columns}
-      data={sticky ? stickyData : data}
+      data={data}
     />
   )
 }
