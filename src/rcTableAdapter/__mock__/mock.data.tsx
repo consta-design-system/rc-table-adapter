@@ -27,11 +27,78 @@ export const columns = [
   },
 ]
 
+export const columnsFixed = [
+  {
+    title: 'Кто',
+    dataIndex: 'name',
+    key: 'name',
+    width: 150,
+    fixed: 'left',
+  },
+  {
+    title: 'Что делает',
+    dataIndex: 'occupation',
+    key: 'occupation',
+    width: 150,
+  },
+  {
+    title: 'Где',
+    dataIndex: 'address',
+    key: 'address',
+    width: 150,
+  },
+  {
+    title: 'Возраст',
+    dataIndex: 'age',
+    key: 'age',
+    width: 150,
+  },
+  {
+    title: 'Лучший друг',
+    dataIndex: 'bestFriend',
+    key: 'bestFriend',
+    width: 150,
+  },
+  {
+    title: 'Дата рождения',
+    dataIndex: 'date',
+    key: 'date',
+    width: 150,
+  },
+  {
+    title: 'Поддержать',
+    dataIndex: '',
+    key: 'operations',
+    render: () => <div>Покормить печеньем</div>,
+    fixed: 'right',
+  },
+]
+
 export const data = [
   { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
   { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
 ]
 
+export const dataFixed = [
+  {
+    name: 'Крокодил Гена',
+    occupation: 'работает',
+    address: 'Зоопарк',
+    key: '1',
+    age: '40 лет',
+    bestFriend: 'Чебурашка',
+    date: '15 декабря 1969',
+  },
+  {
+    name: 'Чебурашка',
+    occupation: 'косит траву',
+    address: 'Дом друзей',
+    key: '2',
+    age: '10 лет',
+    bestFriend: 'Крокодил Гена',
+    date: '15 декабря 1969',
+  },
+]
 export const expandData = [
   {
     key: '1',

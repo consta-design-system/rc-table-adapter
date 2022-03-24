@@ -1,0 +1,9 @@
+.RcTableAdapterStories {
+  width: 100%;
+
+  &_fixed {
+    overflow: auto;
+
+    width: 500px;
+  }
+}
