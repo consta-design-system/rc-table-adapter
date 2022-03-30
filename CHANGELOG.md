@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.3 (30/03/2022)
+- [fix(RcTable): fix styles on fixed columns (#16)](https://github.com/consta-design-system/rc-table-adapter/commit/42f2a82ad4d2ef8c1f79d2c6fe6d40155b4d66e3) - [@N1MBER](https://github.com/N1MBER)
+- [fix(Favicon): fix favicon (#15)](https://github.com/consta-design-system/rc-table-adapter/commit/16313a573aa857c5f2c6dd47455a58ef0166aa9c) - [@N1MBER](https://github.com/N1MBER)
+
+--------------------
+
 ## v1.0.2 (17/03/2022)
 - [fix(RcTable): fix bugs with sticky mode (#14)](https://github.com/consta-design-system/rc-table-adapter/commit/ae3c5d2ce2728cd6182845aba81dc166b650f8d0) - [@N1MBER](https://github.com/N1MBER)
 - [docs(common): edit links to github (#13)](https://github.com/consta-design-system/rc-table-adapter/commit/74c86bf215e49baffd6d6a1b117d803420193920) - [@arhayka](https://github.com/arhayka)
