@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react'
 
 import { createMetadata } from '@/__private__/storybook'
-
+import './RcTableAdapterStories.css'
 import mdx from './RcTableAdapter.docs.mdx'
 import { boolean, select } from '@storybook/addon-knobs'
 import { defaultPropSize, propSize } from '../helper'
 import {
-  columns,
+  columns as mockColumns,
   data as mockData,
   expandData,
   groupColumns,
   groupData,
+  dataFixed,
+  columnsFixed,
   stickyData,
 } from '../__mock__/mock.data'
 import { default as RCTable } from 'rc-table'
 import { rcTableAdapter } from '@/rcTableAdapter/rcTableAdapter'
+import { cn } from '@/__private__/utils/bem'
 
 const getKnobs = () => ({
   sticky: boolean('sticky', false),
@@ -27,7 +30,10 @@ const getKnobs = () => ({
   zebraStriped: select('zebraStriped', ['', 'odd', 'even'], ''),
   verticalAlign: select('verticalAlign', ['top', 'center', 'bottom'], 'top'),
   headerVerticalAlign: select('headerVerticalAlign', ['center', 'bottom'], 'center'),
+  withFixedColumns: boolean('withFixedColumns', false),
 })
+
+const cnRcTableAdapterStories = cn('RcTableAdapterStories')
 
 export function Playground() {
   const {
@@ -41,14 +47,19 @@ export function Playground() {
     expandable,
     sticky,
     grouped,
+    withFixedColumns,
   } = getKnobs()
 
   const [data, setData] = useState<Array<Record<string, unknown>>>([])
+  const [columns, setColumns] = useState<Array<Record<string, unknown>>>([])
 
   useEffect(() => {
     const getData = () => {
       if (emptyData) {
         return []
+      }
+      if (withFixedColumns) {
+        return dataFixed
       }
       if (grouped) {
         return groupData
@@ -63,7 +74,20 @@ export function Playground() {
     }
 
     setData(getData())
-  }, [expandable, grouped, emptyData, sticky])
+  }, [expandable, grouped, emptyData, sticky, withFixedColumns])
+
+  useEffect(() => {
+    const getColumns = () => {
+      if (withFixedColumns) {
+        return columnsFixed
+      }
+      if (grouped) {
+        return groupColumns
+      }
+      return mockColumns
+    }
+    setColumns(getColumns())
+  }, [withFixedColumns, expandable, grouped, emptyData, sticky])
 
   const tableProps = rcTableAdapter({
     size,
@@ -75,13 +99,15 @@ export function Playground() {
   })
 
   return (
-    <RCTable
-      {...tableProps}
-      sticky={sticky}
-      style={{ maxHeight: 500, width: '80%' }}
-      columns={grouped ? groupColumns : columns}
-      data={data}
-    />
+    <div className={cnRcTableAdapterStories({ fixed: withFixedColumns })}>
+      <RCTable
+        {...tableProps}
+        sticky={sticky}
+        style={{ maxHeight: 500, width: '100%' }}
+        columns={columns}
+        data={data}
+      />
+    </div>
   )
 }
 
