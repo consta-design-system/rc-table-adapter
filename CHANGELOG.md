@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.0.4 (20/04/2022)
+- [docs(global): replace url (#20)](https://github.com/consta-design-system/rc-table-adapter/commit/784264a11d002ac745f827f188a2b8d4c32c7e98) - [@arhayka](https://github.com/arhayka)
+- [docs(common): change links to vercel (#19)](https://github.com/consta-design-system/rc-table-adapter/commit/56266f30ec86a6a03939369be87229ee0cf9d980) - [@arhayka](https://github.com/arhayka)
+- [chore(deploy): edit public path (#18)](https://github.com/consta-design-system/rc-table-adapter/commit/a70ad7e26fe440d4f5aba75c41a5028ddb619d55) - [@gizeasy](https://github.com/gizeasy)
+- [chore(deploy): add deploy (#17)](https://github.com/consta-design-system/rc-table-adapter/commit/e7add18fdf418103e8647859a5dcb76631d524ad) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v1.0.3 (30/03/2022)
 - [fix(RcTable): fix styles on fixed columns (#16)](https://github.com/consta-design-system/rc-table-adapter/commit/42f2a82ad4d2ef8c1f79d2c6fe6d40155b4d66e3) - [@N1MBER](https://github.com/N1MBER)
 - [fix(Favicon): fix favicon (#15)](https://github.com/consta-design-system/rc-table-adapter/commit/16313a573aa857c5f2c6dd47455a58ef0166aa9c) - [@N1MBER](https://github.com/N1MBER)
