@@ -1,6 +1,6 @@
-# [Дизайн-система Consta](http://consta.design/) | rcTableAdapter
+# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | rcTableAdapter
 
-Адаптер rcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.design/).
+Адаптер rcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.gazprom-neft.ru/).
 
 # Как использовать
 
@@ -16,7 +16,7 @@ $ yarn add @consta/rc-table-adapter
 
 ## Подключите зависимости
 
-Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.consta.design/?path=/docs/components-theme--playground).
+Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.gizeasy.ru/?path=/docs/components-theme--playground).
 
 ### Можно использовать компоненты
 
@@ -126,12 +126,12 @@ $ yarn test
 
 ## Документация
 
-[Посмотреть документацию и примеры](http://rc-table-adapter.consta.design/)
+[Посмотреть документацию и примеры](http://rc-table-adapter.gizeasy.ru/)
 
 ## Контрибьюторам
 
-Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.consta.design/?path=/docs/common-develop-contributors--page).
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.gizeasy.ru/?path=/docs/common-develop-contributors--page).
 
 ## Лицензия
 
-Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на условиях открытой [лицензии MIT](https://consta.design/static/licence_mit.pdf).
+Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на условиях открытой [лицензии MIT](https://consta.gazprom-neft.ru/static/licence_mit.pdf).
