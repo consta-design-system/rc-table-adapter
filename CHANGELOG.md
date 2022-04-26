@@ -1,5 +1,11 @@
 # Changelog
 
+## v1.0.5 (26/04/2022)
+- [docs(global): remove gpn (#21)](https://github.com/consta-design-system/rc-table-adapter/commit/27e371a4ee31ed9723688ac32a093b5b78d1eb81) - [@arhayka](https://github.com/arhayka)
+- [chore(deploy): update config](https://github.com/consta-design-system/rc-table-adapter/commit/3f43a72296c84fbbe0a57f5c0d5a59932e214b34) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v1.0.4 (20/04/2022)
 - [docs(global): replace url (#20)](https://github.com/consta-design-system/rc-table-adapter/commit/784264a11d002ac745f827f188a2b8d4c32c7e98) - [@arhayka](https://github.com/arhayka)
 - [docs(common): change links to vercel (#19)](https://github.com/consta-design-system/rc-table-adapter/commit/56266f30ec86a6a03939369be87229ee0cf9d980) - [@arhayka](https://github.com/arhayka)
