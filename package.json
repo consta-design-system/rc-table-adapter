@@ -1,6 +1,6 @@
 {
   "name": "@consta/rc-table-adapter",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "scripts": {
     "build:css": "NODE_ENV=production postcss 'src/**/*.css' --base src --dir lib",
     "build:js": "NODE_ENV=production BUILDING_JS=true babel src --out-dir lib --extensions '.ts,.tsx' --source-maps",
@@ -97,7 +97,7 @@
     "@babel/preset-typescript": "7.10.4",
     "@consta/uikit": ">= 3.0.0",
     "@consta/widgets-configs": "1.5.1",
-    "@consta/widgets-utils": "0.2.14",
+    "@consta/widgets-utils": "0.2.15",
     "@mdx-js/loader": "1.5.9",
     "@storybook/addon-actions": "5.3.19",
     "@storybook/addon-docs": "5.3.19",
