@@ -1,137 +1,63 @@
-# [Дизайн-система Consta](http://consta.design/) | rcTableAdapter
+# [Дизайн-система Consta](http://consta.gazprom-neft.ru/) | Библиотека интерфейсных компонентов
 
-Адаптер rcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.design/).
+Consta — дизайн-система для разработки интерфейсов, написана на [React](https://reactjs.org/), сделана и поддерживается в «Газпром нефти».
+
+В дизайн-систему входит несколько библиотек. **Здесь — библиотека интерфейсных компонентов:** простые контролы, сложные блоки, темы и хуки. Все библиотеки представлены в виде компонентов и макетов в Figma.
+
+## Что входит в дизайн-систему
+
+### Библиотека компонентов
+
+[Репозиторий](https://github.com/consta-design-system/uikit) | [NPM](https://www.npmjs.com/package/@consta/uikit) | [Документация и стенд](http://uikit.gizeasy.ru/?path=/story/common-about--page) | [Макеты](https://www.figma.com/community/file/853774806786762374)
+
+### Библиотека графиков
+
+[Репозиторий](https://github.com/consta-design-system/charts) | [NPM](https://www.npmjs.com/package/@consta/charts) | [Документация и стенд](http://charts.gizeasy.ru) | [Макеты](https://www.figma.com/community/file/982611119114314434)
+
+[>> Посмотреть все библиотеки](http://uikit.gizeasy.ru/?path=/docs/common-about-github--page)
+
+<hr>
+
+Подробности — на [на сайте дизайн-системы Consta](http://consta.gazprom-neft.ru/)
+
+Следите за новостями и релизами в [телеграм-канале дизайн-системы](https://t.me/consta_ui_releases)
 
 # Как использовать
 
 ## Установите пакет
 
-```sh
-# NPM
-$ npm install @consta/rc-table-adapter
-
-# Yarn
-$ yarn add @consta/rc-table-adapter
+```
+yarn add @consta/uikit
 ```
 
-## Подключите зависимости
+## Начните работу с библиотекой
 
-Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.consta.design/?path=/docs/components-theme--playground).
+Чтобы начать работу с библиотекой интерфейсных компонентов, подключите тему:
 
-### Можно использовать компоненты
+```tsx
+import React from 'react';
+import { Theme, presetGpnDefault } from '@consta/uikit/Theme';
+import { Button } from '@consta/uikit/Button';
 
-Например, так:
-
-```js
-import React from 'react'
-import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter'
-import { default as RCTable } from 'rc-table'
-
-const columns = [
-  {
-    title: 'Кто',
-    dataIndex: 'name',
-    key: 'name',
-    width: 150,
-  },
-  {
-    title: 'Что делает',
-    dataIndex: 'occupation',
-    key: 'occupation',
-    width: 150,
-  },
-  {
-    title: 'Где',
-    dataIndex: 'address',
-    key: 'address',
-    width: 150,
-  },
-  {
-    title: 'Как помочь',
-    dataIndex: '',
-    key: 'operations',
-    render: () => <p>Покормить печеньем</p>,
-  },
-]
-
-const data = [
-  { name: 'Крокодил Гена', occupation: 'работает', address: 'Зоопарк', key: '1' },
-  { name: 'Чебурашка', occupation: 'косит траву', address: 'Дом друзей', key: '2' },
-]
-
-export function TableExample() {
-  const tableProps = rcTableAdapter({ size: 'l', zebraStriped: 'odd', borderBetweenColumns: false })
-
-  return <RCTable data={data} columns={columns} {...tableProps} />
-}
+const App = () => (
+  <Theme preset={presetGpnDefault}>
+    <Button label="Кнопка" />
+  </Theme>
+);
 ```
 
-или так:
+[Что такое темы и как с ними работать](http://uikit.gizeasy.ru/?path=/docs/thematization-what-are-themes--page)
 
-```js
-import React from 'react'
-import { cnRcTable } from '@consta/rc-table-adapter/RcTable'
+## Документация и стенд
 
-import { default as RCTable } from 'rc-table'
-export const RcTableExample = () => {
-  const prefix = cnRcTable(
-    {
-      size: 's',
-      zebraStriped: 'odd',
-      borderBetweenColumns: true,
-      borderBetweenRows: true,
-      verticalAlign: 'center',
-      headerVerticalAlign: 'center',
-    },
-    ['CustomTable']
-  )
+На стенде можно менять параметры и смотреть, как меняются компоненты. Документация — во вкладке у каждого компонента.
 
-  return <RCTable prefixCls={prefix} data={data} columns={columns} />
-}
-```
-
-## Разработка
-
-### Подготовка окружения
-
-Рабочее окружение должно содержать NodeJS и Yarn, необходимые версии можно узнать в файле [package.json](./package.json) в блоке **engines**.
-
-Чтобы установить зависимости, выполните команду:
-
-```sh
-$ yarn install
-```
-
-### Основные команды
-
-```sh
-# Сборка и старт Storybook
-$ yarn start
-
-# Сборка для production
-$ yarn build
-
-# Линтинг всех файлов
-$ yarn lint
-
-# Форматирование всех файлов prettier
-$ yarn format
-
-# Запуск юнит-тестов
-$ yarn unit
-
-# Запуск юнит-тестов, тестирование TS, линтинг файлов
-$ yarn test
-```
-
-## Документация
-
-[Посмотреть документацию и примеры](http://rc-table-adapter.consta.design/)
+[Вперёд, к стенду](http://uikit.gizeasy.ru/)
 
 ## Контрибьюторам
 
-Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.consta.design/?path=/docs/common-develop-contributors--page).
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.gizeasy.ru/?path=/docs/common-develop-contributors--page).
 
 ## Лицензия
 
-Дизайн-систему можно использовать бесплатно, она распространяется на условиях открытой [лицензии MIT](https://consta.design/static/licence_mit.pdf).
+Дизайн-систему можно использовать бесплатно, она распространяется ПАО «Газпром нефть» на условиях открытой [лицензии MIT](https://consta.gazprom-neft.ru/static/licence_mit.pdf).
