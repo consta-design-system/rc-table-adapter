@@ -1,0 +1,40 @@
+import { RcTableExample } from './examples/RcTableExample/RcTableExample';
+
+```tsx
+import { cnRcTable } from '@consta/rc-table-adapter/rcTable';
+```
+
+С помощью миксина `RcTable` можно стилизовать таблицу для дизайн-системы Consta.
+
+## Свойства
+
+| Параметры               | Тип                         | По умолчанию | Описание                             |
+| ----------------------- | --------------------------- | ------------ | ------------------------------------ |
+| `size?`                 | `'s', 'm', 'l'`             | `s`          | Размер таблицы                       |
+| `zebraStriped?`         | `'odd', 'even'`             | -            | Окрашивание строк через одну         |
+| `borderBetweenColumns?` | `boolean`                   | `true`       | Отображение границ между строками    |
+| `borderBetweenRows?`    | `boolean`                   | `true`       | Отображение границ между колонками   |
+| `verticalAlign?`        | `'center', 'top', 'bottom'` | `top`        | Выравнивание по вертикали            |
+| `headerVerticalAlign?`  | `'center', 'bottom'`        | `center`     | Выравнивание заголовков по вертикали |
+
+## Пример
+
+```tsx
+const Example = () => {
+  const prefix = cnRcTable(
+    {
+      size: 's',
+      zebraStriped: 'odd',
+      borderBetweenColumns: true,
+      borderBetweenRows: true,
+      verticalAlign: 'center',
+      headerVerticalAlign: 'center',
+    },
+    ['CustomTable'],
+  );
+
+  return <RCTable prefixCls={prefix} data={data} columns={columns} />;
+};
+```
+
+<RcTableExample />
