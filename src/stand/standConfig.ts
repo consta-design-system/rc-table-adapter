@@ -23,6 +23,5 @@ export const { createStand } = createConfig({
   groups,
   group: 'Адаптеры',
   image,
-  description:
-    '[тут описание что это такое] Ультра топчик библиотеки с пацанскими кнопками и графиками, качай.',
+  description: 'Адаптер для таблицы rc-table.',
 });

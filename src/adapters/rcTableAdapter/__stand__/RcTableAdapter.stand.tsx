@@ -1,8 +1,11 @@
 import { createStand } from '##/stand/standConfig';
 
+import image from './RcTableAdapter.image.svg';
+
 export default createStand({
   title: 'RcTableAdapter',
   id: 'RcTableAdapter',
+  image,
   group: 'adapters',
   description: 'Этот адаптер стилизует таблицу.',
   version: '1.0.5',
