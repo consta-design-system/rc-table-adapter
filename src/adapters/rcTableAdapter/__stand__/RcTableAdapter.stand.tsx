@@ -1,7 +1,5 @@
 import { createStand } from '##/stand/standConfig';
 
-import image from './RcTableAdapter.image.svg';
-
 export default createStand({
   title: 'RcTableAdapter',
   id: 'RcTableAdapter',
