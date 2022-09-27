@@ -1,12 +1,8 @@
-import './RcTableAdapterStories.css';
-
-import { boolean, select } from '@storybook/addon-knobs';
-// eslint-disable-next-line import/no-named-default
-import { default as RCTable } from 'rc-table';
+import { useBoolean, useSelect } from '@consta/stand';
+import RCTable from 'rc-table';
 import React, { useEffect, useState } from 'react';
 
 import { rcTableAdapter } from '##/adapters/rcTableAdapter/rcTableAdapter';
-import { createMetadata } from '##/storybook';
 import { cn } from '##/utils/bem';
 
 import {
@@ -20,42 +16,33 @@ import {
   stickyData,
 } from '../__mock__/mock.data';
 import { defaultPropSize, propSize } from '../helper';
-import mdx from './RcTableAdapter.docs.mdx';
 
-const getKnobs = () => ({
-  sticky: boolean('sticky', false),
-  emptyData: boolean('emptyData', false),
-  expandable: boolean('expandable', false),
-  grouped: boolean('grouped', false),
-  size: select('size', propSize, defaultPropSize),
-  borderBetweenColumns: boolean('borderBetweenColumns', true),
-  borderBetweenRows: boolean('borderBetweenRows', true),
-  zebraStriped: select('zebraStriped', ['', 'odd', 'even'], ''),
-  verticalAlign: select('verticalAlign', ['top', 'center', 'bottom'], 'top'),
-  headerVerticalAlign: select(
+const cnRcTableAdapterVariants = cn('RcTableAdapterVariants');
+
+const Variants = () => {
+  const sticky = useBoolean('sticky', false);
+  const emptyData = useBoolean('emptyData', false);
+  const expandable = useBoolean('expandable', false);
+  const grouped = useBoolean('grouped', false);
+  const size = useSelect('size', propSize, defaultPropSize);
+  const borderBetweenColumns = useBoolean('borderColumns', true);
+  const borderBetweenRows = useBoolean('borderRows', true);
+  const zebraStriped = useSelect(
+    'zebraStriped',
+    ['none', 'odd', 'even'],
+    'none',
+  );
+  const verticalAlign = useSelect(
+    'verticalAlign',
+    ['top', 'center', 'bottom'],
+    'top',
+  );
+  const headerVerticalAlign = useSelect(
     'headerVerticalAlign',
     ['center', 'bottom'],
     'center',
-  ),
-  withFixedColumns: boolean('withFixedColumns', false),
-});
-
-const cnRcTableAdapterStories = cn('RcTableAdapterStories');
-
-export function Playground() {
-  const {
-    size,
-    borderBetweenColumns,
-    borderBetweenRows,
-    zebraStriped,
-    headerVerticalAlign,
-    verticalAlign,
-    emptyData,
-    expandable,
-    sticky,
-    grouped,
-    withFixedColumns,
-  } = getKnobs();
+  );
+  const withFixedColumns = useBoolean('withFixedColumns', false);
 
   const [data, setData] = useState<Array<Record<string, unknown>>>([]);
   const [columns, setColumns] = useState<Array<Record<string, unknown>>>([]);
@@ -100,13 +87,13 @@ export function Playground() {
     size,
     borderBetweenColumns,
     borderBetweenRows,
-    zebraStriped: zebraStriped === '' ? undefined : zebraStriped,
+    zebraStriped: zebraStriped === 'none' ? undefined : zebraStriped,
     headerVerticalAlign,
     verticalAlign,
   });
 
   return (
-    <div className={cnRcTableAdapterStories({ fixed: withFixedColumns })}>
+    <div className={cnRcTableAdapterVariants({ fixed: withFixedColumns })}>
       <RCTable
         {...tableProps}
         sticky={sticky}
@@ -116,14 +103,6 @@ export function Playground() {
       />
     </div>
   );
-}
+};
 
-export default createMetadata({
-  title: 'Utils/RcTableAdapter',
-  id: 'Utils/RcTableAdapter',
-  parameters: {
-    docs: {
-      page: mdx,
-    },
-  },
-});
+export default Variants;
