@@ -1,0 +1,16 @@
+.ExpandIcon {
+  padding-right: var(--space-xs);
+  cursor: pointer;
+
+  & svg {
+    transition: transform 0.3s;
+  }
+
+  &_expanded svg {
+    transform: rotate(180deg);
+  }
+
+  &_hidden {
+    visibility: hidden;
+  }
+}
