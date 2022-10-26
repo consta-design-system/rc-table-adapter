@@ -1,0 +1,18 @@
+#### Установите пакет и зависимости
+
+`yarn add @consta/uikit @consta/rc-table-adapter`
+
+или
+
+`npm install @consta/uikit @consta/rc-table-adapter`
+
+#### Подключите тему
+
+Тему обязательно нужно подключать в корне приложения, так, чтобы все компоненты были вложены в [компонент `Theme`](##LIBS.LIB.STAND/lib:uikit/stand:components-theme-stable).
+
+#### Создайте стилизованную таблицу
+
+Есть два варианта:
+
+- Подключите миксин [RcTable](##LIBS.LIB.STAND/lib:rc-table-adapter/stand:mixs-rctable-stable) — он добавит таблице стили из Consta. Если нужно скрыть часть таблицы, используйте иконку [ExpandIcon](##LIBS.LIB.STAND/lib:rc-table-adapter/stand:components-expandicon-stable).
+- Подключите адаптер [rcTableAdapter](##LIBS.LIB.STAND/lib:rc-table-adapter/stand:adapters-rctableadapter-stable), чтобы добавить стили, иконки и значения по умолчанию для некоторых свойств.

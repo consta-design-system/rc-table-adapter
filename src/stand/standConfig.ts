@@ -7,17 +7,25 @@ export const { createStand } = createConfig({
   id: 'rc-table-adapter',
   groups: [
     {
+      title: 'Документация',
+      id: 'docs',
+      initialOpen: true,
+    },
+    {
       title: 'Компоненты',
       id: 'components',
+      initialOpen: true,
     },
     {
       title: 'Адаптеры',
       id: 'adapters',
       view: 'card',
+      initialOpen: true,
     },
     {
       title: 'Миксины',
       id: 'mixs',
+      initialOpen: true,
     },
   ],
   group: 'Адаптеры',
