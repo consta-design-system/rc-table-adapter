@@ -31,4 +31,5 @@ export const { createStand } = createConfig({
   group: 'Адаптеры',
   image,
   description: 'Адаптер для таблицы rc-table.',
+  repositoryUrl: 'https://github.com/consta-design-system/rc-table-adapter',
 });
