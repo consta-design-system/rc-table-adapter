@@ -4,15 +4,96 @@
 
 # Как использовать
 
-    @@ -16,7 +16,7 @@ $ yarn add @consta/rc-table-adapter
+```sh
+# NPM
+$ npm install @consta/rc-table-adapter
+# Yarn
+$ yarn add @consta/rc-table-adapter
+```
 
 ## Подключите зависимости
 
-Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://uikit.consta.design/libs/uikit/theme-themeabout)
+Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://portal.consta.design/libs/portal/theme-themeabout)
 
 ### Можно использовать компоненты
 
-    @@ -126,12 +126,12 @@ $ yarn test
+Например, так:
+
+```js
+import React from 'react';
+import { rcTableAdapter } from '@consta/rc-table-adapter/rcTableAdapter';
+import { default as RCTable } from 'rc-table';
+const columns = [
+  {
+    title: 'Кто',
+    dataIndex: 'name',
+    key: 'name',
+    width: 150,
+  },
+  {
+    title: 'Что делает',
+    dataIndex: 'occupation',
+    key: 'occupation',
+    width: 150,
+  },
+  {
+    title: 'Где',
+    dataIndex: 'address',
+    key: 'address',
+    width: 150,
+  },
+  {
+    title: 'Как помочь',
+    dataIndex: '',
+    key: 'operations',
+    render: () => <p>Покормить печеньем</p>,
+  },
+];
+const data = [
+  {
+    name: 'Крокодил Гена',
+    occupation: 'работает',
+    address: 'Зоопарк',
+    key: '1',
+  },
+  {
+    name: 'Чебурашка',
+    occupation: 'косит траву',
+    address: 'Дом друзей',
+    key: '2',
+  },
+];
+export function TableExample() {
+  const tableProps = rcTableAdapter({
+    size: 'l',
+    zebraStriped: 'odd',
+    borderBetweenColumns: false,
+  });
+  return <RCTable data={data} columns={columns} {...tableProps} />;
+}
+```
+
+или так:
+
+```js
+import React from 'react';
+import { cnRcTable } from '@consta/rc-table-adapter/RcTable';
+import { default as RCTable } from 'rc-table';
+export const RcTableExample = () => {
+  const prefix = cnRcTable(
+    {
+      size: 's',
+      zebraStriped: 'odd',
+      borderBetweenColumns: true,
+      borderBetweenRows: true,
+      verticalAlign: 'center',
+      headerVerticalAlign: 'center',
+    },
+    ['CustomTable'],
+  );
+  return <RCTable prefixCls={prefix} data={data} columns={columns} />;
+};
+```
 
 ## Документация
 
@@ -20,7 +101,7 @@
 
 ## Контрибьюторам
 
-Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://uikit.consta.design/libs/uikit/custom-contribute).
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://portal.consta.design/libs/portal/custom-contribute).
 
 ## Лицензия
 
