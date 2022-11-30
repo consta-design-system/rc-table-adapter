@@ -1,15 +1,15 @@
 # Changelog
 
+## v2.0.1 (30/11/2022)
+- [fix(ExpandIcon): fixed style](https://github.com/consta-design-system/rc-table-adapter/commit/cb80b6ae17d7542474d442b4e96f782b0402e364) - [@gizeasy](https://github.com/gizeasy)
+- [fix(prefix): add prefix for class names (#31)](https://github.com/consta-design-system/rc-table-adapter/commit/8f1a43db01083b8e2e3c300d909a9319efa16480) - [@N1MBER](https://github.com/N1MBER)
+- [docs(portal): readme, version, stand (#30)](https://github.com/consta-design-system/rc-table-adapter/commit/72a71152b6926a9633352b24af378625f7446638) - [@arhayka](https://github.com/arhayka)
+- [docs: readme, start, links (#29)](https://github.com/consta-design-system/rc-table-adapter/commit/b4a48afa15517fdc144722444974357b87b5156b) - [@arhayka](https://github.com/arhayka)
+- [chore(deps): update @consta/stand](https://github.com/consta-design-system/rc-table-adapter/commit/dc33cfb76bc9fbc58d244ef1632b7c165331bccf) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v2.0.0 (29/09/2022)
-Самое важное:
-Выкладываем новый стенд и сборщик.
-
-Добавили песочницу: теперь в ней можно смотреть примеры компонентов.
-
-⚠️ Внимание: изменилась структура экспорта компонетов
-
----
-
 - [chore(stand): new stand and new builder (#22)](https://github.com/consta-design-system/rc-table-adapter/commit/55c17ce39b4cbabeb5e1c53c6a45004e3e912d46) - [@gizeasy](https://github.com/gizeasy)
 - [chore(stand): add automation publish stand](https://github.com/consta-design-system/rc-table-adapter/commit/1a6898e318a9a473e7d9ec56f5d181034622f158) - [@gizeasy](https://github.com/gizeasy)
 
