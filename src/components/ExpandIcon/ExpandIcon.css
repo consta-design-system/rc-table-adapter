@@ -1,5 +1,5 @@
-.ExpandIcon {
-  padding-right: var(--space-xs);
+.rcta--ExpandIcon {
+  margin-right: var(--space-xs);
   cursor: pointer;
 
   & svg {
