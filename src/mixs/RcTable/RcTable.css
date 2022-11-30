@@ -1,4 +1,4 @@
-.RcTable {
+.rcta--RcTable {
   --table-cell-vertical: var(--space-2xs);
   --table-cell-horizontal: var(--space-xs);
   --table-row-color-first: transparent;
@@ -95,7 +95,7 @@
   &-thead {
     background: var(--color-bg-default);
 
-    & .RcTable-cell {
+    & .rcta--RcTable-cell {
       box-sizing: border-box;
       font-size: var(--size-text-xs);
       font-weight: bold;
@@ -108,7 +108,7 @@
     overflow: auto;
     height: 100%;
 
-    & .RcTable-cell {
+    & .rcta--RcTable-cell {
       font-size: var(--size-text-s);
       font-weight: normal;
       line-height: var(--line-height-text-m);
@@ -182,13 +182,13 @@
     }
   }
 
-  &.RcTable_zebraStriped_odd,
-  &.RcTable_zebraStriped_even {
+  &.rcta--RcTable_zebraStriped_odd,
+  &.rcta--RcTable_zebraStriped_even {
     & tbody tr {
       --row-background: var(--table-row-color-first);
       background-color: var(--row-background);
 
-      & .RcTable-cell-fix {
+      & .rcta--RcTable-cell-fix {
         &-left::before,
         &-right::before {
           background: var(--row-background);
@@ -204,7 +204,7 @@
   tbody > tr {
     max-height: calc(var(--table-cell-vertical) + var(--line-height-text-m));
 
-    &.RcTable-row-level:not(.RcTable_zebraStriped_odd):not(.RcTable_zebraStriped_even) {
+    &.rcta--RcTable-row-level:not(.rcta--RcTable_zebraStriped_odd):not(.rcta--RcTable_zebraStriped_even) {
       &-0 {
         background-color: rgba(0, 32, 51, 0);
       }
@@ -234,10 +234,10 @@
       vertical-align: var(--table-verticalAlign);
     }
 
-    &:not(.RcTable-placeholder):hover {
+    &:not(.rcta--RcTable-placeholder):hover {
       background-color: var(--color-bg-ghost);
 
-      & .RcTable-cell-fix {
+      & .rcta--RcTable-cell-fix {
         &-left::before,
         &-right::before {
           background: var(--color-bg-ghost);
