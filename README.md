@@ -1,6 +1,6 @@
 # [Дизайн-система Consta](http://consta.design/) | rcTableAdapter
 
-Адаптер rcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.design/).
+Адаптер rcTableAdapter стилизует таблицу [rc-table](https://github.com/react-component/table) для [дизайн-системы Consta](https://consta.design).
 
 # Как использовать
 
@@ -13,7 +13,7 @@ $ yarn add @consta/rc-table-adapter
 
 ## Подключите зависимости
 
-Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://portal.consta.design/libs/portal/theme-themeabout)
+Чтобы начать работу, установите библиотеку [`@consta/uikit`](https://www.npmjs.com/package/@consta/uikit) и [настройте тему](http://consta.design/libs/portal/theme-themeabout)
 
 ### Можно использовать компоненты
 
@@ -97,11 +97,39 @@ export const RcTableExample = () => {
 
 ## Документация
 
-[Посмотреть документацию и примеры](http://rc-table-adapter.consta.design/)
+[Посмотреть документацию и примеры](http://consta.design/libs/rc-table-adapter)
+
+## Разработка
+
+### Подготовка окружения
+
+Рабочее окружение должно содержать NodeJS и Yarn.
+
+Чтобы установить зависимости, выполните команду:
+
+```sh
+$ yarn install
+```
+
+### Основные команды
+
+```sh
+# Запуск локального сервера для разработки
+$ yarn start
+
+# Сборка пакета
+$ yarn build
+
+# Сборка стенда
+$ yarn stand:build
+
+# Запуск тестов
+$ yarn test
+```
 
 ## Контрибьюторам
 
-Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](http://portal.consta.design/libs/portal/custom-contribute).
+Будем рады, если вы захотите принять участие в разработке дизайн-системы =) Но сначала прочитайте [инструкцию для контрибьюторов](https://consta.design/libs/portal/contributers-code).
 
 ## Лицензия
 
