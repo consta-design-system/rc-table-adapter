@@ -1,5 +1,16 @@
 # Changelog
 
+## v2.0.2 (23/05/2023)
+Запускать локальный сервер разработки и сборку пакетов теперь можно и на ОС Windows.
+
+---
+
+- [chore: configure build for windows (#34)](https://github.com/consta-design-system/rc-table-adapter/commit/87894a2de93b1795a63bc8ee09d5a3ebae803a66) - [@gizeasy](https://github.com/gizeasy)
+- [docs(rc-table-adapter): add aliases (#33)](https://github.com/consta-design-system/rc-table-adapter/commit/5381ad3b61c4269e2b7c0a8852c25b8efd41628a) - [@N1MBER](https://github.com/N1MBER)
+- [chore: update @consta/stand](https://github.com/consta-design-system/rc-table-adapter/commit/fa89fd745352f2ef19d6abf4b696f5c35a1f46cf) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v2.0.1 (30/11/2022)
 - [fix(ExpandIcon): fixed style](https://github.com/consta-design-system/rc-table-adapter/commit/cb80b6ae17d7542474d442b4e96f782b0402e364) - [@gizeasy](https://github.com/gizeasy)
 - [fix(prefix): add prefix for class names (#31)](https://github.com/consta-design-system/rc-table-adapter/commit/8f1a43db01083b8e2e3c300d909a9319efa16480) - [@N1MBER](https://github.com/N1MBER)
