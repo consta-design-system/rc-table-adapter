@@ -32,4 +32,6 @@ export const { createStand } = createConfig({
   image,
   description: 'Адаптер для таблицы rc-table.',
   repositoryUrl: 'https://github.com/consta-design-system/rc-table-adapter',
+  figmaUrl:
+    'https://www.figma.com/file/LKYyjgQ3khFHvXraZAG1n1?embed_host=share&kind=&node-id=70%3A13140&viewer=1',
 });
