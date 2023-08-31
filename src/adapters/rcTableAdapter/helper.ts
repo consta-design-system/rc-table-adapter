@@ -9,7 +9,7 @@ export type DefaultItem = {
   key?: string | number;
   dataIndex?: string;
   render?: () => React.ReactElement | null;
-  chlidren?: DefaultItem[];
+  children?: DefaultItem[];
 };
 
 export type RcTableAdapterResults<ITEM extends {} = DefaultItem> = {
