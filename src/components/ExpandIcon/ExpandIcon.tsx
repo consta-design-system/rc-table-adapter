@@ -1,6 +1,6 @@
 import './ExpandIcon.css';
 
-import { IconArrowDown } from '@consta/uikit/IconArrowDown';
+import { IconArrowDown } from '@consta/icons/IconArrowDown';
 import { RenderExpandIconProps } from 'rc-table/lib/interface';
 import React from 'react';
 
@@ -16,7 +16,9 @@ export function ExpandIcon<ITEM>(params: RenderExpandIconProps<ITEM>) {
         expanded,
         hidden: !(Array.isArray(expandable) && expandable.length > 0),
       })}
-      onClick={(e) => onExpand(record, e)}
+      onClick={(e: React.MouseEvent<HTMLElement, MouseEvent>) =>
+        onExpand(record, e)
+      }
       size="xs"
     />
   );
