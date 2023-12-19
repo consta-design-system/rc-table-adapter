@@ -1,5 +1,20 @@
 # Changelog
 
+## v3.0.0 (19/12/2023)
+Самое важное:
+- Сторонние зависимости перенесены в `peerDependencies`. Установить их вы сможете самостоятельно, полный список доступен [здесь](https://github.com/consta-design-system/rc-table-adapter/blob/master/package.json) 
+- Добавлена поддержка `@consta/uikit` `v5.0.0`
+
+---
+
+- [chore: update uikit version (#40)](https://github.com/consta-design-system/rc-table-adapter/commit/80c3b007f7a7902df98f9c3f04efb2f74ad9b879) - [@gizeasy](https://github.com/gizeasy)
+- [chore(utils): added status classNames (#39)](https://github.com/consta-design-system/rc-table-adapter/commit/eb2086ddcc31318e6e91c4bc282f76a6dc768341) - [@N1MBER](https://github.com/N1MBER)
+- [fix(rcTableAdapter): fix types (#38)](https://github.com/consta-design-system/rc-table-adapter/commit/540b10080b09436c0966f6053be676cced94e1ef) - [@N1MBER](https://github.com/N1MBER)
+- [chore: edit deploy config and codeowners (#36)](https://github.com/consta-design-system/rc-table-adapter/commit/1f1d9b40c8599327137fb2fcc1746393a1a2783a) - [@gizeasy](https://github.com/gizeasy)
+- [docs(standConfig): add figmaUrl (#35)](https://github.com/consta-design-system/rc-table-adapter/commit/796aa0a82d9be377a12c452c786fd54239cc743c) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v2.0.2 (23/05/2023)
 Запускать локальный сервер разработки и сборку пакетов теперь можно и на ОС Windows.
 
