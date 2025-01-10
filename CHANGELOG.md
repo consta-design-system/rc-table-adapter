@@ -1,5 +1,10 @@
 # Changelog
 
+## v3.0.1 (10/01/2025)
+- [fix(deps): fixed peerDependencies (#42)](https://github.com/consta-design-system/rc-table-adapter/commit/416acdb3b84d53128ba996841c05538d2c4b9fce) - [@gizeasy](https://github.com/gizeasy)
+
+--------------------
+
 ## v3.0.0 (19/12/2023)
 Самое важное:
 - Сторонние зависимости перенесены в `peerDependencies`. Установить их вы сможете самостоятельно, полный список доступен [здесь](https://github.com/consta-design-system/rc-table-adapter/blob/master/package.json) 
