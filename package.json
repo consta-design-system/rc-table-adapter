@@ -49,7 +49,7 @@
   ],
   "peerDependencies": {
     "@consta/icons": "^1.0.0",
-    "@consta/uikit": "5.0.0",
+    "@consta/uikit": "^5.0.0",
     "rc-table": "^7.18.1"
   },
   "config": {
