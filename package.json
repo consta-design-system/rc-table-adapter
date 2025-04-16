@@ -26,6 +26,7 @@
     "stand:start": "cross-env NODE_ENV=development webpack serve --open --progress --mode development --hot --progress --config node_modules/@consta/stand/webpack.config.js",
     "start": "yarn stand:generate && yarn stand:start",
     "rm:dist": "node ./scripts/rm.js --path=./dist",
+    "rm:node_modules": "node ./scripts/rm.js --path=./node_modules",
     "rm:build": "node ./scripts/rm.js --path=./build"
   },
   "files": [
@@ -94,7 +95,7 @@
     "@bem-react/classnames": "^1.3.10",
     "@bem/sdk.naming.cell.match": "^0.1.3",
     "@bem/sdk.naming.presets": "^0.2.3",
-    "@consta/stand": "^0.0.134",
+    "@consta/stand": "^0.0.150",
     "@mdx-js/loader": "^2.1.5",
     "@oclif/command": "^1.8.16",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.3",
@@ -142,7 +143,7 @@
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "identity-obj-proxy": "^3.0.0",
-    "install-peers-cli": "https://github.com/evless/install-peers-cli#fix-yarn-policies",
+    "install-peers-cli": "^2.2.0",
     "jest": "^28.1.3",
     "jest-environment-jsdom": "^28.1.3",
     "lint-staged": "^13.0.3",
